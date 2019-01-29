@@ -1,48 +1,21 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { darken, lighten } from 'polished'
-import Layout from '../components/layout'
-// import Image from '../components/image'
-// import SEO from '../components/seo'
 import ThemeWrapper from '../components/ThemeWrapper'
-import Header from '../components/header'
+import Header from '../components/Header'
 import Footer from '../components/footer'
 import heroImg from '../images/nashville-skyline-compressed.jpg'
 import aboutImg from '../images/joey-dye-sf.jpg'
 import Project from '../components/project'
 import Form from '../components/Form'
-import Head from '../components/Head'
+import SEO from '../components/SEO'
+import projects from '../data/projects'
 
 library.add(faArrowAltCircleRight, fab)
-
-const projects = [
-  {
-    name: 'Explore the Nations',
-    description:
-      "Explore The Nations features some of the top restaurants in one of Nashville's hippest neighborhoods.",
-    source: 'https://github.com/JoeyDye/explore-the-nations',
-    id: 1,
-  },
-  {
-    name: 'My Reads',
-    description:
-      'The MyReads app provides a simple way to find new books and track your latest reads.',
-    source: 'https://github.com/JoeyDye/my-reads',
-    id: 2,
-  },
-  {
-    name: 'Memory Match Game',
-    description:
-      'The memory match game is a play off the classic game known as Concentration.',
-    source: 'https://github.com/JoeyDye/memory-match-game',
-    id: 3,
-  },
-]
 
 const Showcase = styled.section`
   padding: 20vh 17vh;
@@ -226,11 +199,11 @@ const GoogleMap = styled.img`
 const IndexPage: React.SFC = () => (
   <ThemeWrapper>
     <div>
-    <Head />
+      <SEO title="Joey Dye | Web Developer" />
       <Header />
       <Showcase>
         <ShowcaseContent>
-          <HeadingPrimary color="white">Front-End Developer</HeadingPrimary>
+          <HeadingPrimary color="white">Full Stack Developer</HeadingPrimary>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -269,11 +242,12 @@ const IndexPage: React.SFC = () => (
             name={project.name}
             description={project.description}
             source={project.source}
+            demo={project.demo}
           />
         ))}
       </ProjectsSection>
       <FormSection>
-        <GoogleMap src="mapUrl" />
+        <GoogleMap src={mapUrl} />
         <FormWrapper>
           <HeadingSecondary color="white" position="center">
             Contact Me
@@ -282,16 +256,30 @@ const IndexPage: React.SFC = () => (
         </FormWrapper>
       </FormSection>
       <Prefooter>
-        <FontAwesomeIcon icon={['fab', 'js']} color="black" size="6x" />
-        <FontAwesomeIcon icon={['fab', 'css3']} color="black" size="6x" />
-        <FontAwesomeIcon icon={['fab', 'html5']} color="black" size="6x" />
-        <FontAwesomeIcon icon={['fab', 'react']} color="black" size="6x" />
-        <FontAwesomeIcon icon={['fab', 'angular']} color="black" size="6x" />
-        <FontAwesomeIcon icon={['fab', 'sass']} color="black" size="6x" />
+        {faIcons.map((iconClass, i) => (
+          <FontAwesomeIcon
+            key={i}
+            icon={['fab', iconClass]}
+            color="black"
+            size="6x"
+          />
+        ))}
       </Prefooter>
       <Footer />
     </div>
-  </ ThemeWrapper>
+  </ThemeWrapper>
 )
 
 export default IndexPage
+
+const faIcons: Array<string> = [
+  'js',
+  'css3',
+  'html5',
+  'react',
+  'angular',
+  'sass',
+]
+
+const mapUrl =
+  'https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyD9uWFF2vnINFaBF_thHkVNEfurgRc-4Jo &center=-33.9,151.14999999999998&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels%7Cvisibility:off&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:administrative.neighborhood%7Cvisibility:off&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=1600x500'

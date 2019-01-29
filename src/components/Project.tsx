@@ -8,6 +8,7 @@ export interface Props {
   name: string
   description: string
   source: string
+  demo: string
 }
 
 const ProjectWrapper = styled.section`
@@ -38,9 +39,11 @@ const Project: React.SFC<Props> = props => {
       <HeadingTertiary color="white">{props.name}</HeadingTertiary>
       <p>{props.description}</p>
       <ProjectBtn href={props.source} target="_blank">
-        View Source
+        Source
       </ProjectBtn>
-      <ProjectBtn href="#">View Demo</ProjectBtn>
+      <ProjectBtn href={props.demo} target="_blank">
+        Demo
+      </ProjectBtn>
     </ProjectWrapper>
   )
 }
