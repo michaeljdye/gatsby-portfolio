@@ -47,7 +47,7 @@ const ProjectBtn = styled.a`
     background: ${props => lighten(0.2, props.theme.colorPrimary)};
   }
 `
-
+// Test comment
 const Project: React.SFC<Props> = props => {
   console.log(props)
   return (
