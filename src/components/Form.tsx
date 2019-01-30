@@ -8,7 +8,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 
-const FormWrapper = styled.div`
+const FormWrapper = styled.form`
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
@@ -44,6 +44,12 @@ const FormInput = styled.input`
   border: none;
   border-bottom: 1px solid #fff;
   background: none;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid ${props => props.theme.colorPrimary};
+  }
 
   &::placeholder {
     color: #fff;
@@ -52,29 +58,44 @@ const FormInput = styled.input`
 
 const Form = () => {
   return (
-    <FormWrapper>
+    <FormWrapper name="contact" netlify>
       <FormWrapperInner>
         <div>
           <FormLabel htmlFor="first-name">
             <FontAwesomeIcon icon={faUser} color="white" size="lg" />
           </FormLabel>
-          <FormInput id="first-name" type="text" placeholder="First Name" />
+          <FormInput
+            id="first-name"
+            type="text"
+            placeholder="First Name"
+            name="first name"
+          />
         </div>
         <div>
           <FormLabel htmlFor="last-name">
             <FontAwesomeIcon icon={faUser} color="white" size="lg" />
           </FormLabel>
-          <FormInput id="last-name" type="text" placeholder="Last Name" />
+          <FormInput
+            id="last-name"
+            type="text"
+            placeholder="Last Name"
+            name="last name"
+          />
         </div>
         <div>
           <FormLabel htmlFor="last-name">
             <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
           </FormLabel>
-          <FormInput id="last-name" type="email" placeholder="Email" />
+          <FormInput
+            id="last-name"
+            type="email"
+            placeholder="Email"
+            name="email"
+          />
         </div>
       </FormWrapperInner>
-      <FormBtn>
-        Let's Chat{' '}
+      <FormBtn type="submit">
+        Let's Chat &nbsp;
         <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
       </FormBtn>
     </FormWrapper>
