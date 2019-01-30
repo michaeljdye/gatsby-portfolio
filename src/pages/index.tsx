@@ -62,13 +62,13 @@ const HeadingSecondary = styled.h2`
   text-align: ${(props: any) => props.position};
 `
 
-const Btn = styled.button`
-  border: none;
-  padding: 5px 15px;
+const Btn = styled.a`
+  padding: 7px 15px;
   background: ${props => props.theme.colorPrimary};
   font-weight: 600;
   text-transform: uppercase;
   color: #111;
+  text-decoration: none;
   transition: all 0.2s linear;
 
   &:hover {
@@ -91,7 +91,7 @@ const AboutSection = styled.section`
   background: #f3f3f3;
   color: #000;
 
-  button {
+  a {
     align-self: flex-start;
   }
 
@@ -205,34 +205,34 @@ const IndexPage: React.SFC = () => (
         <ShowcaseContent>
           <HeadingPrimary color="white">Full Stack Developer</HeadingPrimary>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nashvile Web Developer with experience in React, Angular, and
+            project management.
           </p>
-          <Btn>
+          <Btn href="#about">
             Learn More &nbsp;
             <FontAwesomeIcon icon={faArrowAltCircleRight} />
           </Btn>
         </ShowcaseContent>
       </Showcase>
-      <AboutSection>
+      <AboutSection id="about">
         <AboutImg />
         <AboutContent>
           <HeadingSecondary className="underline" color="black" position="left">
             About Me
           </HeadingSecondary>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            I am a full stack developer located in Nashville. Hire me to build
+            your next website or app! I have worked in the advertising and
+            marketing industry for more than 4 years, gaining experience in web
+            development, project management, inbound marketing, content writing
+            and SEO. As a Marketing and Web Development Project Manager, I take
+            pride in empowering my project team to deliver the best possible
+            work.
           </p>
-          <Btn>Learn More</Btn>
+          <Btn href="#projects">View Projects</Btn>
         </AboutContent>
       </AboutSection>
-      <ProjectsSection>
+      <ProjectsSection id="projects">
         <HeadingSecondary color="white" position="center">
           Projects
         </HeadingSecondary>
@@ -243,10 +243,11 @@ const IndexPage: React.SFC = () => (
             description={project.description}
             source={project.source}
             demo={project.demo}
+            img={project.img}
           />
         ))}
       </ProjectsSection>
-      <FormSection>
+      <FormSection id="contact">
         <GoogleMap src={mapUrl} />
         <FormWrapper>
           <HeadingSecondary color="white" position="center">
