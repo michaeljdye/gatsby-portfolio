@@ -58,7 +58,7 @@ const FormInput = styled.input`
 
 const Form = () => {
   return (
-    <FormWrapper name="contact" netlify>
+    <FormWrapper name="contact" data-netlify="true">
       <FormWrapperInner>
         <div>
           <FormLabel htmlFor="first-name">
