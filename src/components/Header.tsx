@@ -1,6 +1,7 @@
 import { Link, StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import React from 'react'
+import { media } from '../styles/mixins'
 
 const Container = styled.header`
   display: grid;
@@ -8,15 +9,31 @@ const Container = styled.header`
   align-items: center;
   background: #0b0c10;
   padding: 20px 0;
+
+  ${media.phone`
+    grid-template-columns: 1fr;
+  `}
 `
 
 const SiteTitle = styled.h1`
   margin: 0;
 
+  ${media.phone`
+    margin-bottom: 1.25rem;
+  `}
+
+  ${media.phone`
+    text-align: center;
+  `}
+
   .header__link {
     color: #fff;
     text-decoration: none;
     margin: 0 0 0 6.5rem;
+
+    ${media.phone`
+    margin: 0;
+  `}
   }
 `
 
@@ -27,8 +44,17 @@ const NavLinks = styled.ul`
   list-style: none;
   margin: 0 6.25rem 0 0;
 
+  ${media.phone`
+    justify-content: center;
+    margin: 0;
+  `}
+
   li {
-    margin: 0 40px 0 0;
+    margin: 0;
+  }
+
+  li:not(:last-child) {
+    margin-right: 2.5rem;
   }
 
   .header__link {

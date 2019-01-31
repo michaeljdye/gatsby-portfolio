@@ -17,11 +17,11 @@ const ProjectWrapper = styled.section`
   color: ${props => props.color};
 `
 
-const ImgWrapper = styled.div`
+const ProjectImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5) url(${(props: any) => props.img});
+  background: bottom center rgba(0, 0, 0, 0.5) url(${(props: any) => props.img});
   background-blend-mode: overlay;
   background-size: cover;
   width: 100%;
@@ -52,9 +52,9 @@ const Project: React.SFC<Props> = props => {
   console.log(props)
   return (
     <ProjectWrapper color="white">
-      <ImgWrapper img={props.img}>
+      <ProjectImg img={props.img}>
         <HeadingTertiary color="white">{props.name}</HeadingTertiary>
-      </ImgWrapper>
+      </ProjectImg>
       <p>{props.description}</p>
       <ProjectBtn href={props.source} target="_blank">
         Source

@@ -14,12 +14,14 @@ import Project from '../components/Project'
 import Form from '../components/Form'
 import SEO from '../components/SEO'
 import projects from '../data/projects'
+import { media } from '../styles/mixins'
 
 library.add(faArrowAltCircleRight, fab)
 
 const Showcase = styled.section`
-  padding: 20vh 17vh;
+  padding: 10vw 10vw;
   height: calc(100vh - 88px);
+  width: 100%;
   background: linear-gradient(
       150deg,
       ${props => props.theme.colorSecondary} 50%,
@@ -27,6 +29,19 @@ const Showcase = styled.section`
     ),
     url(${heroImg});
   background-blend-mode: multiply;
+
+  ${media.phone`
+  background: linear-gradient(
+      to right,
+      ${props => props.theme.colorSecondary} 0,
+      ${props => props.theme.colorSecondary} 100%
+    ),
+    url(${heroImg});
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  `}
 `
 
 const ShowcaseContent = styled.div`
@@ -48,11 +63,15 @@ const ShowcaseContent = styled.div`
   p {
     color: #fff;
     width: 50%;
+    line-height: 1.5;
+
+    ${media.phone`width: 100%;`}
   }
 `
 
 const HeadingPrimary = styled.h1`
   font-size: 4.209rem;
+  line-height: 1;
   color: ${props => props.color};
 `
 
@@ -71,6 +90,10 @@ const Btn = styled.a`
   text-decoration: none;
   transition: all 0.2s linear;
 
+  ${media.phone`
+    margin: 0 auto;
+  `}
+
   &:hover {
     background: ${props => lighten(0.2, props.theme.colorPrimary)};
   }
@@ -81,15 +104,31 @@ const Prefooter = styled.section`
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  height: 20vh;
+  height: fit-content;
   background: ${props => props.theme.colorPrimary};
+  padding: 2.5rem;
+
+  ${media.phone`
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    svg {
+      margin-bottom: 1.25rem;
+    }
+  `}
 `
 
 const AboutSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background: #f3f3f3;
   color: #000;
+
+  ${media.phone`
+    grid-template-columns: 1fr;
+    text-align: center;
+  `}
 
   a {
     align-self: flex-start;
@@ -97,19 +136,28 @@ const AboutSection = styled.section`
 
   h2 {
     position: relative;
-  }
 
-  .underline:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 80%;
-    left: -1%;
-    width: 28%;
-    height: 10px;
-    background: ${props => darken(0.2, props.theme.colorPrimary)};
-    opacity: 0.5;
-    transform: skewX(30deg);
+    span {
+      position: relative;
+      display: inline-block;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -10px;
+        width: calc(100% + 20px);
+        z-index: -1;
+        height: 40%;
+        background: ${props => props.theme.colorPrimary};
+        opacity: 0.5;
+        transform: skewX(30deg);
+      }
+    }
+
+    ${media.phone`
+    text-align: center;
+  `}
   }
 `
 
@@ -117,8 +165,13 @@ const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: ${props => props.theme.defaultPadding};
-  height: 70vh;
+  padding: calc(${props => props.theme.defaultPadding} * 2)
+    calc(${props => props.theme.defaultPadding} * 1.5);
+  height: fit-content;
+
+  ${media.phone`
+  padding: ${props => props.theme.defaultPadding} 3rem;
+  `};
 `
 
 const AboutImg = styled.div`
@@ -126,6 +179,8 @@ const AboutImg = styled.div`
   background: center 20% url(${aboutImg});
   background-blend-mode: overlay;
   background-size: cover;
+  width: 100%;
+  min-height: 400px;
 `
 const ProjectsSection = styled.section`
   display: grid;
@@ -136,23 +191,14 @@ const ProjectsSection = styled.section`
   text-align: center;
   background: ${props => props.theme.colorSecondary};
 
+  ${media.phone`
+    grid-template-columns: 1fr;
+  `}
+
   h2 {
     grid-column: 1 / -1;
-    position: relative;
     margin-bottom: 0;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 80%;
-      left: 42%;
-      width: 16%;
-      height: 10px;
-      background: ${props => props.theme.colorPrimary};
-      opacity: 0.5;
-      transform: skewX(30deg);
-    }
+    color: #fff !important;
   }
 `
 
@@ -165,21 +211,18 @@ const FormSection = styled.section`
   color: #f3f3f3;
   position: relative;
 
+  ${media.phone`
+    grid-row: 1 / 2;
+    padding: 0;
+  `}
+
+  ${media.phone`
+    position: initial;
+  `}
+
   h2 {
     position: relative;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 80%;
-      left: 16%;
-      width: 70%;
-      height: 10px;
-      background: ${props => props.theme.colorPrimary};
-      opacity: 0.5;
-      transform: skewX(30deg);
-    }
+    line-height: 1;
   }
 `
 
@@ -188,12 +231,24 @@ const FormWrapper = styled.div`
   background: ${props => props.theme.colorSecondary};
   border: 5px solid ${props => props.theme.colorPrimary};
   width: 40vw;
+
+  ${media.phone`
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  `}
 `
 
 const GoogleMap = styled.img`
   width: 100%;
   position: absolute;
   z-index: -1;
+  margin-bottom: 0;
+
+  ${media.phone`
+    position: static;
+    height: 350px;
+  `}
 `
 
 const IndexPage: React.SFC = () => (
@@ -218,7 +273,7 @@ const IndexPage: React.SFC = () => (
         <AboutImg />
         <AboutContent>
           <HeadingSecondary className="underline" color="black" position="left">
-            About Me
+            <span>About Me</span>
           </HeadingSecondary>
           <p>
             I am a full stack developer located in Nashville. Hire me to build
@@ -234,7 +289,7 @@ const IndexPage: React.SFC = () => (
       </AboutSection>
       <ProjectsSection id="projects">
         <HeadingSecondary color="white" position="center">
-          Projects
+          <span>Projects</span>
         </HeadingSecondary>
         {projects.map(project => (
           <Project

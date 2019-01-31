@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { media } from '../styles/mixins'
 
 export interface Props {}
 
@@ -9,10 +10,16 @@ const FooterWrapper = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  height: 40vh;
+  height: fit-content;
   padding: ${props => props.theme.defaultPadding} 0;
   background: ${props => props.theme.colorTertiary};
   color: #fff;
+
+  ${media.phone`
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.875rem;
+    text-align: center;
+    `}
 `
 
 const SocialIcons = styled.ul`
