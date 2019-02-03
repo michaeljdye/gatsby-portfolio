@@ -51,7 +51,7 @@ const FormInput = styled.input`
 
 const Form = () => {
   return (
-    <ContactForm name="contact" method="POST" action="#" netlify>
+    <ContactForm name="contact" method="POST" action="/" netlify>
       <p>
         <FormLabel>
           <FontAwesomeIcon icon={faUser} color="white" size="lg" />
