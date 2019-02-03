@@ -33,7 +33,7 @@ const FormLabel = styled.label`
   color: #fff;
   font-weight: 600;
 `
-const FormInput = styled.input`
+const FormInput = styled.button`
   border: none;
   border-bottom: 1px solid #fff;
   background: none;
@@ -51,32 +51,54 @@ const FormInput = styled.input`
 
 const Form = () => {
   return (
-    <ContactForm
-      name="contact"
-      method="post"
-      action="/success"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-    >
+    <form name="contact" method="POST" data-netlify="true">
       <p>
-        <FormLabel>
-          <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-          <FormInput type="text" name="name" />
-        </FormLabel>
+        <label>
+          Your Name: <input type="text" name="name" />
+        </label>
       </p>
       <p>
-        <FormLabel>
-          <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
-          <FormInput type="email" name="email" />
-        </FormLabel>
+        <label>
+          Your Email: <input type="email" name="email" />
+        </label>
       </p>
-      <p style={{ display: 'flex', justifyContent: 'center' }}>
-        <FormBtn type="submit">
-          Send&nbsp;
-          <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
-        </FormBtn>
+      <p>
+        <label>
+          Message: <textarea name="message" />
+        </label>
       </p>
-    </ContactForm>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+    // <ContactForm
+    //   name="contact"
+    //   method="post"
+    //   action="/success"
+    //   netlify-honeypot="bot-field"
+    //   data-netlify="true"
+    // >
+    //   <p>
+    //     <FormLabel htmlFor="name">
+    //       <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+    //       &nbsp;
+    //       <FormInput id="name" type="text" name="name" />
+    //     </FormLabel>
+    //   </p>
+    //   <p>
+    //     <FormLabel htmlFor="email">
+    //       <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
+    //       &nbsp;
+    //       <FormInput id="email" type="email" name="email" />
+    //     </FormLabel>
+    //   </p>
+    //   <p style={{ display: 'flex', justifyContent: 'center' }}>
+    //     <FormBtn type="submit">
+    //       Send&nbsp;
+    //       <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
+    //     </FormBtn>
+    //   </p>
+    // </ContactForm>
   )
 }
 
