@@ -1,9 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-// import SEO from '../components/seo'
+const success: React.SFC = () => <div>Your Message has been sent!</div>
 
-const About: React.SFC = () => <div>About Works!</div>
-
-export default About
+export default success

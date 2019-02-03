@@ -51,7 +51,13 @@ const FormInput = styled.input`
 
 const Form = () => {
   return (
-    <ContactForm name="contact" method="POST" action="/" netlify>
+    <ContactForm
+      name="contact"
+      method="post"
+      action="/success"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    >
       <p>
         <FormLabel>
           <FontAwesomeIcon icon={faUser} color="white" size="lg" />
@@ -71,47 +77,6 @@ const Form = () => {
         </FormBtn>
       </p>
     </ContactForm>
-    // <FormWrapper>
-    //   <FormWrapperInner name="contact" method="POST" data-netlify="true">
-    //     <div>
-    //       <FormLabel htmlFor="first-name">
-    //         <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-    //       </FormLabel>
-    //       <FormInput
-    //         id="first-name"
-    //         type="text"
-    //         placeholder="First Name"
-    //         name="first name"
-    //       />
-    //     </div>
-    //     <div>
-    //       <FormLabel htmlFor="last-name">
-    //         <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-    //       </FormLabel>
-    //       <FormInput
-    //         id="last-name"
-    //         type="text"
-    //         placeholder="Last Name"
-    //         name="last name"
-    //       />
-    //     </div>
-    //     <div>
-    //       <FormLabel htmlFor="last-name">
-    //         <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
-    //       </FormLabel>
-    //       <FormInput
-    //         id="last-name"
-    //         type="email"
-    //         placeholder="Email"
-    //         name="email"
-    //       />
-    //     </div>
-    //   </FormWrapperInner>
-    //   <FormBtn type="submit">
-    //     Let's Chat &nbsp;
-    //     <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
-    //   </FormBtn>
-    // </FormWrapper>
   )
 }
 
