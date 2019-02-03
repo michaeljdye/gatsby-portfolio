@@ -17,7 +17,7 @@ const FormWrapper = styled.div`
   color: #000;
 `
 
-const FormWrapperInner = styled.form`
+const ContactForm = styled.form`
   display: grid;
   grid-row-gap: 1.125rem;
   margin-top: 20px;
@@ -56,49 +56,85 @@ const FormInput = styled.input`
   }
 `
 
+const FormTextarea = styled.textarea`
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: none;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid ${props => props.theme.colorPrimary};
+  }
+
+  &::placeholder {
+    color: #fff;
+  }
+`
+
 const Form = () => {
   return (
-    <FormWrapper>
-      <FormWrapperInner name="contact" method="POST" data-netlify="true">
-        <div>
-          <FormLabel htmlFor="first-name">
-            <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-          </FormLabel>
-          <FormInput
-            id="first-name"
-            type="text"
-            placeholder="First Name"
-            name="first name"
-          />
-        </div>
-        <div>
-          <FormLabel htmlFor="last-name">
-            <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-          </FormLabel>
-          <FormInput
-            id="last-name"
-            type="text"
-            placeholder="Last Name"
-            name="last name"
-          />
-        </div>
-        <div>
-          <FormLabel htmlFor="last-name">
-            <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
-          </FormLabel>
-          <FormInput
-            id="last-name"
-            type="email"
-            placeholder="Email"
-            name="email"
-          />
-        </div>
-      </FormWrapperInner>
-      <FormBtn type="submit">
-        Let's Chat &nbsp;
-        <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
-      </FormBtn>
-    </FormWrapper>
+    <ContactForm name="contact" method="POST" data-netlify="true">
+      <p>
+        <FormLabel htmlFor="first-name">
+          Your Name: <FormInput type="text" name="name" id="first-name" />
+        </FormLabel>
+      </p>
+      <p>
+        <FormLabel htmlFor="last-name">
+          Your Email: <FormInput type="email" name="email" id="last-name" />
+        </FormLabel>
+      </p>
+      <p>
+        <FormLabel htmlFor="message">
+          Message: <FormTextarea name="message" id="message" />
+        </FormLabel>
+      </p>
+      <p>
+        <FormBtn type="submit">Let's Chat!</FormBtn>
+      </p>
+    </ContactForm>
+    // <FormWrapper>
+    //   <FormWrapperInner name="contact" method="POST" data-netlify="true">
+    //     <div>
+    //       <FormLabel htmlFor="first-name">
+    //         <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+    //       </FormLabel>
+    //       <FormInput
+    //         id="first-name"
+    //         type="text"
+    //         placeholder="First Name"
+    //         name="first name"
+    //       />
+    //     </div>
+    //     <div>
+    //       <FormLabel htmlFor="last-name">
+    //         <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+    //       </FormLabel>
+    //       <FormInput
+    //         id="last-name"
+    //         type="text"
+    //         placeholder="Last Name"
+    //         name="last name"
+    //       />
+    //     </div>
+    //     <div>
+    //       <FormLabel htmlFor="last-name">
+    //         <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
+    //       </FormLabel>
+    //       <FormInput
+    //         id="last-name"
+    //         type="email"
+    //         placeholder="Email"
+    //         name="email"
+    //       />
+    //     </div>
+    //   </FormWrapperInner>
+    //   <FormBtn type="submit">
+    //     Let's Chat &nbsp;
+    //     <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
+    //   </FormBtn>
+    // </FormWrapper>
   )
 }
 
