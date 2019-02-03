@@ -11,21 +11,11 @@ import {
 
 const ContactForm = styled.form`
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
+  justify-items: center;
   grid-row-gap: 1.125rem;
   margin-top: 40px;
-`
-
-const FormBtn = styled.button`
-  border: none;
-  margin: 0;
-  padding: 3px 0.625rem;
-  background: ${props => props.theme.colorPrimary};
-  font-weight: 600;
-
-  &:hover {
-    background: ${props => lighten(0.2, props.theme.colorPrimary)};
-  }
 `
 
 const FormLabel = styled.label`
@@ -46,6 +36,18 @@ const FormInput = styled.button`
 
   &::placeholder {
     color: #fff;
+  }
+`
+
+const FormBtn = styled.button`
+  border: none;
+  margin: 0;
+  padding: 3px 0.625rem;
+  background: ${props => props.theme.colorPrimary};
+  font-weight: 600;
+
+  &:hover {
+    background: ${props => lighten(0.2, props.theme.colorPrimary)};
   }
 `
 
