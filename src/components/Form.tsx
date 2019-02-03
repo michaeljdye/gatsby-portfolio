@@ -58,6 +58,7 @@ const Form = () => {
       netlify-honeypot="bot-field"
       data-netlify="true"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <p>
         <FormLabel>
           <FontAwesomeIcon icon={faUser} color="white" size="lg" />
