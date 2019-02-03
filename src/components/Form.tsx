@@ -8,7 +8,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 
-const FormWrapper = styled.form`
+const FormWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
@@ -17,7 +17,7 @@ const FormWrapper = styled.form`
   color: #000;
 `
 
-const FormWrapperInner = styled.div`
+const FormWrapperInner = styled.form`
   display: grid;
   grid-row-gap: 1.125rem;
   margin-top: 20px;
@@ -58,8 +58,8 @@ const FormInput = styled.input`
 
 const Form = () => {
   return (
-    <FormWrapper name="contact" data-netlify="true">
-      <FormWrapperInner>
+    <FormWrapper>
+      <FormWrapperInner name="contact" method="POST" data-netlify="true">
         <div>
           <FormLabel htmlFor="first-name">
             <FontAwesomeIcon icon={faUser} color="white" size="lg" />
