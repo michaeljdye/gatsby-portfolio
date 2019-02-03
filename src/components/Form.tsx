@@ -6,21 +6,14 @@ import {
   faUser,
   faEnvelope,
   faPaperPlane,
+  faFileExcel,
 } from '@fortawesome/free-solid-svg-icons'
-
-const FormWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 2rem;
-  justify-items: center;
-  align-items: center;
-  color: #000;
-`
 
 const ContactForm = styled.form`
   display: grid;
+  justify-content: center;
   grid-row-gap: 1.125rem;
-  margin-top: 20px;
+  margin-top: 40px;
 `
 
 const FormBtn = styled.button`
@@ -56,42 +49,26 @@ const FormInput = styled.input`
   }
 `
 
-const FormTextarea = styled.textarea`
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: none;
-  color: #fff;
-
-  &:focus {
-    outline: none;
-    border-bottom: 1px solid ${props => props.theme.colorPrimary};
-  }
-
-  &::placeholder {
-    color: #fff;
-  }
-`
-
 const Form = () => {
   return (
-    <ContactForm name="contact" method="POST" data-netlify="true">
+    <ContactForm name="contact" method="POST" action="#" netlify>
       <p>
-        <FormLabel htmlFor="first-name">
-          Your Name: <FormInput type="text" name="name" id="first-name" />
+        <FormLabel>
+          <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+          <FormInput type="text" name="name" />
         </FormLabel>
       </p>
       <p>
-        <FormLabel htmlFor="last-name">
-          Your Email: <FormInput type="email" name="email" id="last-name" />
+        <FormLabel>
+          <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
+          <FormInput type="email" name="email" />
         </FormLabel>
       </p>
-      <p>
-        <FormLabel htmlFor="message">
-          Message: <FormTextarea name="message" id="message" />
-        </FormLabel>
-      </p>
-      <p>
-        <FormBtn type="submit">Let's Chat!</FormBtn>
+      <p style={{ display: 'flex', justifyContent: 'center' }}>
+        <FormBtn type="submit">
+          Send&nbsp;
+          <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
+        </FormBtn>
       </p>
     </ContactForm>
     // <FormWrapper>
