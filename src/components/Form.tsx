@@ -11,11 +11,21 @@ import {
 
 const ContactForm = styled.form`
   display: grid;
-  grid-template-columns: 1fr;
   justify-content: center;
-  justify-items: center;
   grid-row-gap: 1.125rem;
   margin-top: 40px;
+`
+
+const FormBtn = styled.button`
+  border: none;
+  margin: 0;
+  padding: 3px 0.625rem;
+  background: ${props => props.theme.colorPrimary};
+  font-weight: 600;
+
+  &:hover {
+    background: ${props => lighten(0.2, props.theme.colorPrimary)};
+  }
 `
 
 const FormLabel = styled.label`
@@ -23,7 +33,7 @@ const FormLabel = styled.label`
   color: #fff;
   font-weight: 600;
 `
-const FormInput = styled.button`
+const FormInput = styled.input`
   border: none;
   border-bottom: 1px solid #fff;
   background: none;
@@ -39,47 +49,35 @@ const FormInput = styled.button`
   }
 `
 
-const FormBtn = styled.button`
-  border: none;
-  margin: 0;
-  padding: 3px 0.625rem;
-  background: ${props => props.theme.colorPrimary};
-  font-weight: 600;
-
-  &:hover {
-    background: ${props => lighten(0.2, props.theme.colorPrimary)};
-  }
-`
-
-const Form = () => (
-  <ContactForm
-    name="contact"
-    method="post"
-    action="/success"
-    netlify-honeypot="bot-field"
-    data-netlify="true"
-  >
-    <p>
-      <FormLabel htmlFor="name">
-        <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-        &nbsp;
-        <FormInput id="name" type="text" name="name" />
-      </FormLabel>
-    </p>
-    <p>
-      <FormLabel htmlFor="email">
-        <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
-        &nbsp;
-        <FormInput id="email" type="email" name="email" />
-      </FormLabel>
-    </p>
-    <p style={{ display: 'flex', justifyContent: 'center' }}>
-      <FormBtn type="submit">
-        Send&nbsp;
-        <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
-      </FormBtn>
-    </p>
-  </ContactForm>
-)
+const Form = () => {
+  return (
+    <ContactForm
+      name="contact"
+      method="post"
+      action="/success"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    >
+      <p>
+        <FormLabel>
+          <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+          <FormInput type="text" name="name" />
+        </FormLabel>
+      </p>
+      <p>
+        <FormLabel>
+          <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
+          <FormInput type="email" name="email" />
+        </FormLabel>
+      </p>
+      <p style={{ display: 'flex', justifyContent: 'center' }}>
+        <FormBtn type="submit">
+          Send&nbsp;
+          <FontAwesomeIcon icon={faPaperPlane} color="black" size="lg" />
+        </FormBtn>
+      </p>
+    </ContactForm>
+  )
+}
 
 export default Form
