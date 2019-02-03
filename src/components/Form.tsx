@@ -62,12 +62,14 @@ const Form = () => {
       <p>
         <FormLabel>
           <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+          &nbsp;
           <FormInput type="text" name="name" />
         </FormLabel>
       </p>
       <p>
         <FormLabel>
           <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
+          &nbsp;
           <FormInput type="email" name="email" />
         </FormLabel>
       </p>
