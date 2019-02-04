@@ -12,7 +12,7 @@ const ProjectWrapper = styled.section`
   }
 `
 
-const ProjectImg = styled.div`
+const ProjectImg: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

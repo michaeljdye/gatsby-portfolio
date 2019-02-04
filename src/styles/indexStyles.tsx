@@ -28,6 +28,12 @@ export const Showcase = styled.section`
   align-items: center;
   text-align: center;
   `}
+
+  h1 {
+    font-size: 4.209rem;
+    line-height: 1;
+    color: #fff;
+  }
 `
 
 export const ShowcaseContent = styled.div`
@@ -53,18 +59,6 @@ export const ShowcaseContent = styled.div`
 
     ${media.phone`width: 100%;`}
   }
-`
-
-export const HeadingPrimary = styled.h1`
-  font-size: 4.209rem;
-  line-height: 1;
-  color: ${props => props.color};
-`
-
-export const HeadingSecondary = styled.h2`
-  font-size: 50.52px;
-  color: ${props => props.color};
-  text-align: ${(props: any) => props.position};
 `
 
 export const Btn = styled.a`
@@ -106,7 +100,7 @@ export const Prefooter = styled.section`
   `}
 `
 
-export const AboutSection = styled.section`
+export const AboutSection: any = styled.section`
   display: grid;
   grid-template-columns: 1fr 2fr;
   color: #000;
@@ -121,6 +115,8 @@ export const AboutSection = styled.section`
   }
 
   h2 {
+    font-size: 50.52px;
+    text-align: left;
     position: relative;
 
     span {
@@ -168,7 +164,7 @@ export const AboutImg = styled.div`
   width: 100%;
   min-height: 400px;
 `
-export const ProjectsSection = styled.section`
+export const ProjectsSection: any = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: calc(${props => props.theme.defaultPadding} / 2);
@@ -182,13 +178,16 @@ export const ProjectsSection = styled.section`
   `}
 
   h2 {
+    font-size: 50.52px;
+    color: #fff;
+    text-align: center;
     grid-column: 1 / -1;
     margin-bottom: 0;
     color: #fff !important;
   }
 `
 
-export const FormSection = styled.section`
+export const FormSection: any = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,6 +206,9 @@ export const FormSection = styled.section`
   `}
 
   h2 {
+    font-size: 50.52px;
+    color: #fff;
+    text-align: center;
     position: relative;
     line-height: 1;
   }
