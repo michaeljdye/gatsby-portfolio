@@ -1,78 +1,19 @@
 import * as React from 'react'
-import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { media } from '../styles/mixins'
+import {
+  FooterWrapper,
+  SocialIcons,
+  Paragraph,
+  Copyright,
+} from '../styles/footerStyles'
 
-export interface Props {}
-
-const FooterWrapper = styled.footer`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  height: fit-content;
-  padding: ${props => props.theme.defaultPadding} 0;
-  background: ${props => props.theme.colorTertiary};
-  color: #fff;
-
-  ${media.phone`
-    grid-template-columns: 1fr;
-    grid-row-gap: 1.875rem;
-    text-align: center;
-    `}
-`
-
-const SocialIcons = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  span {
-    padding-left: 10px;
-  }
-`
-
-const HeadingTertiary = styled.h3`
-  font-size: 1.935rem;
-`
-
-const Heading4 = styled.h4`
-  font-size: 1.563rem;
-`
-
-const Paragraph = styled.p`
-  margin-bottom: 10px;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    padding-left: 10px;
-  }
-`
-
-const Copyright = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: calc(${props => props.theme.defaultPadding} / 3);
-  background: #000;
-  color: #fff;
-  text-align: center;
-  font-size: 0.875rem;
-`
-
-const Footer: React.SFC<Props> = () => {
+const Footer: React.SFC<{}> = () => {
   return (
     <>
       <FooterWrapper>
         <div>
-          <HeadingTertiary>Joey Dye</HeadingTertiary>
+          <h3>Joey Dye</h3>
           <SocialIcons>
             <li>
               <a href="https://github.com/JoeyDye" target="_blank">
@@ -95,7 +36,7 @@ const Footer: React.SFC<Props> = () => {
           </SocialIcons>
         </div>
         <div>
-          <Heading4>Contact</Heading4>
+          <h4>Contact</h4>
           <Paragraph>
             <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
             <a href="&#109;&#97;ilt&#111;&#58;&#37;6A%&#54;Fe%79%40&#37;6&#65;&#111;eyd&#37;&#55;9%65&#46;&#99;o%&#54;D">

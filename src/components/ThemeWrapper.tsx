@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { ReactChildren } from 'react'
 import { ThemeProvider } from 'styled-components'
+import ThemeInterface from '../models/theme'
 
-const theme = {
+const theme: ThemeInterface = {
   colorPrimary: '#6efaf1',
   colorSecondary: '#202833',
   colorTertiary: '#0b0c10',

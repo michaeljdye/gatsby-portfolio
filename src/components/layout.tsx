@@ -5,9 +5,8 @@ import SEO from '../components/SEO'
 import ThemeWrapper from '../components/ThemeWrapper'
 import Header from './header'
 import Footer from './footer'
-import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout: React.FunctionComponent<{}> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

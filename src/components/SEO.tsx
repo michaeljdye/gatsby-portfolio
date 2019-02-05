@@ -1,29 +1,32 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import favicon from '../images/favicon.png'
 
-const SEO = ({ title, description }) => (
+interface Props {
+  title?: string
+  description?: string
+}
+
+const SEO: React.FunctionComponent<Props> = ({ title, description }) => (
   <StaticQuery
     query={query}
-    render={({
-      site: {
-        siteMetadata: { defaultTitle, titleTemplate, defaultDescription },
-      },
-    }) => {
+    render={data => {
       const seo = {
-        title: title || defaultTitle,
-        description: description || defaultDescription,
+        title: title || data.site.siteMetadata.defaultTitle,
+        description: description || data.site.siteMetadata.defaultDescription,
       }
 
       return (
         <>
           <Helmet
             title={seo.title}
-            titleTemplate={titleTemplate}
+            titleTemplate={data.site.siteMetadata.titleTemplate}
             link={[
-              { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+              {
+                rel: 'shortcut icon',
+                type: 'image/png',
+                href: data.file.childImageSharp.fluid,
+              },
             ]}
           >
             <meta name="description" content={seo.description} />
@@ -36,22 +39,19 @@ const SEO = ({ title, description }) => (
 
 export default SEO
 
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-}
-
-SEO.defaultProps = {
-  title: null,
-  description: null,
-}
-
 const query = graphql`
   query SEO {
     site {
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
+      }
+    }
+    file(relativePath: { eq: "favicon.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

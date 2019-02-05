@@ -1,44 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import { lighten } from 'polished'
+import {
+  ProjectWrapper,
+  ProjectImg,
+  ProjectBtn,
+} from '../styles/projectsStyles'
 
-const ProjectWrapper = styled.section`
-  color: ${props => props.color};
-
-  h3 {
-    align-items: center;
-    color: ${props => props.color};
-  }
-`
-
-const ProjectImg: any = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: bottom center rgba(0, 0, 0, 0.5) url(${(props: any) => props.img});
-  background-blend-mode: overlay;
-  background-size: cover;
-  width: 100%;
-  height: 12.5rem;
-  margin-bottom: 1.25rem;
-  border-radius: 3px;
-`
-const ProjectBtn = styled.a`
-  margin: 0 10px 0 0;
-  padding: 3px 10px;
-  background: ${props => props.theme.colorPrimary};
-  font-weight: 600;
-  color: #000;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  &:hover {
-    background: ${props => lighten(0.2, props.theme.colorPrimary)};
-  }
-`
-
-const Projects: React.SFC = () => (
+const Projects: React.SFC<{}> = () => (
   <StaticQuery
     query={PROJECT_CARD_QUERY}
     render={({ allMarkdownRemark, allImageSharp }) =>

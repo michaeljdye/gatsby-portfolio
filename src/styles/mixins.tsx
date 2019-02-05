@@ -1,6 +1,12 @@
-import { css } from 'styled-components'
+import { css } from '../models/styled-components'
 
-const sizes = {
+interface sizes {
+  desktop: number
+  tablet: number
+  phone: number
+}
+
+const sizes: sizes = {
   desktop: 992,
   tablet: 768,
   phone: 576,
