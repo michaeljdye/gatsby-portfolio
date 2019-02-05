@@ -1,0 +1,17 @@
+backend:
+  name: github
+  branch: master
+  repo: JoeyDye/joey-dye
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'Posts'
+    label: 'Posts'
+    folder: 'src/posts'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Content', name: 'content', widget: 'markdown' }
