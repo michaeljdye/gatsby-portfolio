@@ -25,7 +25,7 @@ const SEO: React.FunctionComponent<Props> = ({ title, description }) => (
               {
                 rel: 'shortcut icon',
                 type: 'image/png',
-                href: data.file.childImageSharp.fluid,
+                href: `${data.file.childImageSharp.fluid}`,
               },
             ]}
           >
