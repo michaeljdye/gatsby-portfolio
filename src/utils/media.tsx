@@ -1,4 +1,4 @@
-import { css } from '../models/styledComponents'
+import { css } from 'styled-components'
 
 interface sizes {
   desktop: number
