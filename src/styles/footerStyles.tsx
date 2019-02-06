@@ -1,4 +1,4 @@
-import styled from '../models/styled-components'
+import styled from '../models/styledComponents'
 import { media } from './mixins'
 
 export const FooterWrapper = styled.footer`

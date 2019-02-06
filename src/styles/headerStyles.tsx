@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '../models/styledComponents'
 import { media } from './mixins'
 
 export const Container = styled.header`

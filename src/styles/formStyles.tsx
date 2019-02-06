@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '../models/styledComponents'
 import { lighten } from 'polished'
 
 export const ContactForm = styled.form`
