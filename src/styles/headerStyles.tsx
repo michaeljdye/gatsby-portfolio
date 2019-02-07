@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { media } from '../utils/'
+import { media } from './mixins'
 
 export const Container = styled.header`
   display: grid;

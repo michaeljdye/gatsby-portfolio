@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { media } from '../utils/'
+import styled from '../models/styled-components'
+import { media } from './mixins'
 
 export const FooterWrapper = styled.footer`
   display: grid;

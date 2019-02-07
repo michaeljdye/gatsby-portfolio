@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { lighten } from 'polished'
 import heroImg from '../images/nashville-skyline-compressed.jpg'
 import aboutImg from '../images/joey-dye-sf.jpg'
-import { media } from '../utils/'
+import { media } from './mixins'
 
 export const Showcase = styled.section`
   padding: 10vw 10vw;

@@ -12,7 +12,7 @@ import {
   FormBtn,
 } from '../styles/formStyles'
 
-const Form: React.SFC<{}> = () => {
+const Form: React.SFC = () => {
   return (
     <ContactForm
       name="contact"

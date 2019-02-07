@@ -3,7 +3,6 @@ module.exports = {
     title: `Joey Dye`,
     description: `Web developer from Nashville, TN.`,
     author: `Joey Dye`,
-    siteUrl: 'https://kind-bartik-9cea0f.netlify.com/',
   },
   plugins: [
     {

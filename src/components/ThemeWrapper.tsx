@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactChildren } from 'react'
 import { ThemeProvider } from 'styled-components'
 import ThemeInterface from '../models/theme'
 
