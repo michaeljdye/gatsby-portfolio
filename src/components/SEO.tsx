@@ -21,13 +21,6 @@ const SEO: React.FunctionComponent<Props> = ({ title, description }) => (
           <Helmet
             title={seo.title}
             titleTemplate={data.site.siteMetadata.titleTemplate}
-            link={[
-              {
-                rel: 'shortcut icon',
-                type: 'image/png',
-                href: `${data.file.childImageSharp.fluid}`,
-              },
-            ]}
           >
             <meta name="description" content={seo.description} />
           </Helmet>
@@ -45,13 +38,6 @@ const query = graphql`
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
-      }
-    }
-    file(relativePath: { eq: "favicon.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
       }
     }
   }
