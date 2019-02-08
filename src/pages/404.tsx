@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 // import SEO from '../components/seo'
 
-const NotFoundPage: React.SFC = () => (
+const notFoundPage: React.SFC = () => (
   <Layout>
     {/* <SEO title="404: Not found" /> */}
     <h1>NOT FOUND</h1>
@@ -11,4 +11,4 @@ const NotFoundPage: React.SFC = () => (
   </Layout>
 )
 
-export default NotFoundPage
+export default notFoundPage

@@ -22,7 +22,7 @@ import {
 
 library.add(faArrowAltCircleRight, fab)
 
-const IndexPage: React.SFC = () => (
+const indexPaige: React.SFC = () => (
   <>
     <Layout>
       <div>
@@ -85,7 +85,7 @@ const IndexPage: React.SFC = () => (
   </>
 )
 
-export default IndexPage
+export default indexPaige
 
 const faIcons: any = ['js', 'css3', 'html5', 'react', 'angular', 'sass']
 
