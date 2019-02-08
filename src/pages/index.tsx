@@ -3,9 +3,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
-import Projects from '../components/projects'
-import Form from '../components/form'
-import Layout from '../components/layout'
+import Projects from '../components/Projects'
+import Form from '../components/Form'
+import Layout from '../components/Layout'
 import {
   GoogleMap,
   FormWrapper,
