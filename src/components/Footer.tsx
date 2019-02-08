@@ -49,7 +49,7 @@ const Footer: React.SFC<{}> = () => {
           </Paragraph>
         </div>
       </FooterWrapper>
-      <Copyright>&copy; 2019 Joey Dye. All Rights Reserved.</Copyright>
+      <Copyright>&copy; 2019 Joey Dye. | All Rights Reserved.</Copyright>
     </>
   )
 }
