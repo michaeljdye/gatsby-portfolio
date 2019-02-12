@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import SEO from './SEO'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -17,6 +18,7 @@ const Layout: React.FunctionComponent<{}> = ({ children }) => (
     `}
     render={({ site }) => (
       <div>
+        <SEO />
         <Header />
         {children}
         <Footer />

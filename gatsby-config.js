@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Joey Dye`,
-    description: `Web developer from Nashville, TN.`,
-    author: `Joey Dye`,
+    title: 'Joey Dye',
+    titleTemplate: '%s · Web Developer',
+    description:
+      'I am a Nashville web developer passionate about building the next generation of tech.',
+    url: 'https://joeydye.com', // No trailing slash allowed!
+    image: '/images/favicon.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@joey_m_dye',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

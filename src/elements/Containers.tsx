@@ -51,6 +51,10 @@ export const FooterWrapper = styled.footer`
   h4 {
     font-size: 1.563rem;
   }
+
+  .footer__content {
+    padding-left: 10px;
+  }
 `
 
 export const FormWrapper = styled.div`
