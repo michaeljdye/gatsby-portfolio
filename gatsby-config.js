@@ -5,6 +5,7 @@ module.exports = {
     author: `Joey Dye`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

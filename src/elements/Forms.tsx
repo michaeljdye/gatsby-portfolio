@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { lighten } from 'polished'
+import { colorPrimary } from '../utilities'
 
 export const ContactForm = styled.form`
   display: grid;
@@ -12,11 +13,11 @@ export const FormBtn = styled.button`
   border: none;
   margin: 0;
   padding: 3px 0.625rem;
-  background: ${props => props.theme.colorPrimary};
+  background: ${colorPrimary};
   font-weight: 600;
 
   &:hover {
-    background: ${props => lighten(0.2, props.theme.colorPrimary)};
+    background: ${lighten(0.2, colorPrimary)};
   }
 `
 
@@ -33,7 +34,7 @@ export const FormInput = styled.input`
 
   &:focus {
     outline: none;
-    border-bottom: 1px solid ${props => props.theme.colorPrimary};
+    border-bottom: 1px solid ${colorPrimary};
   }
 
   &::placeholder {

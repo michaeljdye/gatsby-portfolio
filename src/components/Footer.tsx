@@ -1,12 +1,7 @@
 import * as React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-import {
-  FooterWrapper,
-  SocialIcons,
-  Paragraph,
-  Copyright,
-} from '../styles/footerStyles'
+import { FooterWrapper, SocialIcons, Paragraph, Copyright } from '../elements'
 
 const Footer: React.SFC<{}> = () => {
   return (

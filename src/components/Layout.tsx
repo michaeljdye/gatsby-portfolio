@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import ThemeWrapper from './ThemeWrapper'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -17,13 +16,11 @@ const Layout: React.FunctionComponent<{}> = ({ children }) => (
       }
     `}
     render={({ site }) => (
-      <ThemeWrapper>
-        <div>
-          <Header />
-          {children}
-          <Footer />
-        </div>
-      </ThemeWrapper>
+      <div>
+        <Header />
+        {children}
+        <Footer />
+      </div>
     )}
   />
 )

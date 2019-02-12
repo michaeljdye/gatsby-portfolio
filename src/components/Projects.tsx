@@ -1,10 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import {
-  ProjectWrapper,
-  ProjectImg,
-  ProjectBtn,
-} from '../styles/projectsStyles'
+import { ProjectWrapper, ProjectImg, Btn } from '../elements'
 
 const Projects: React.SFC<{}> = () => (
   <StaticQuery
@@ -22,12 +18,17 @@ const Projects: React.SFC<{}> = () => (
             <h3 color="white">{node.frontmatter.title}</h3>
           </ProjectImg>
           <p>{node.excerpt}</p>
-          <ProjectBtn href={node.frontmatter.source} target="_blank">
+          <Btn
+            modifiers="small"
+            mr="10px"
+            href={node.frontmatter.source}
+            target="_blank"
+          >
             Source
-          </ProjectBtn>
-          <ProjectBtn href={node.frontmatter.demo} target="_blank">
+          </Btn>
+          <Btn modifiers="small" href={node.frontmatter.demo} target="_blank">
             Demo
-          </ProjectBtn>
+          </Btn>
         </ProjectWrapper>
       ))
     }

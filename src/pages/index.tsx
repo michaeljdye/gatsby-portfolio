@@ -18,7 +18,7 @@ import {
   Btn,
   ShowcaseContent,
   Showcase,
-} from '../styles/indexStyles'
+} from '../elements'
 
 library.add(faArrowAltCircleRight, fab)
 

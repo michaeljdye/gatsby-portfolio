@@ -5,12 +5,7 @@ import {
   faEnvelope,
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
-import {
-  ContactForm,
-  FormLabel,
-  FormInput,
-  FormBtn,
-} from '../styles/formStyles'
+import { ContactForm, FormLabel, FormInput, FormBtn } from '../elements'
 
 const Form: React.SFC = () => {
   return (

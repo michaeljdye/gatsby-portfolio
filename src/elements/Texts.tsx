@@ -1,26 +1,14 @@
 import styled from 'styled-components'
-import { media } from './mixins'
-
-export const Container = styled.header`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  background: #0b0c10;
-  padding: 20px 0;
-
-  ${media.phone`
-    grid-template-columns: 1fr;
-  `}
-`
+import { defaultPadding, below } from '../utilities'
 
 export const SiteTitle = styled.h1`
   margin: 0;
 
-  ${media.phone`
+  ${below.phone`
     margin-bottom: 1.25rem;
   `}
 
-  ${media.phone`
+  ${below.phone`
     text-align: center;
   `}
 
@@ -29,10 +17,32 @@ export const SiteTitle = styled.h1`
     text-decoration: none;
     margin: 0 0 0 6.5rem;
 
-    ${media.phone`
+    ${below.phone`
     margin: 0;
   `}
   }
+`
+
+export const Paragraph = styled.p`
+  margin-bottom: 10px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+`
+
+export const Copyright = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: calc(${defaultPadding} / 3);
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
 `
 
 export const NavLinks = styled.ul`
@@ -42,7 +52,7 @@ export const NavLinks = styled.ul`
   list-style: none;
   margin: 0 6.25rem 0 0;
 
-  ${media.phone`
+  ${below.phone`
     justify-content: center;
     margin: 0;
   `}

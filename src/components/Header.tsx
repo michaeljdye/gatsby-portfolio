@@ -1,14 +1,7 @@
 import { Link, StaticQuery, graphql } from 'gatsby'
 import React from 'react'
-import { NavLinks, SiteTitle, Container } from '../styles/headerStyles'
-
-interface HeaderStatelessProps {
-  site: {
-    siteMetadata: {
-      title: string
-    }
-  }
-}
+import HeaderProps from '../models/HeaderProps'
+import { NavLinks, SiteTitle, HeaderContainer } from '../elements'
 
 const Header: React.SFC<{}> = () => (
   <StaticQuery
@@ -25,8 +18,8 @@ const Header: React.SFC<{}> = () => (
       site: {
         siteMetadata: { title },
       },
-    }: HeaderStatelessProps) => (
-      <Container>
+    }: HeaderProps) => (
+      <HeaderContainer>
         <SiteTitle>
           <Link className="header__link" to="/">
             {title}
@@ -51,7 +44,7 @@ const Header: React.SFC<{}> = () => (
             </li>
           </NavLinks>
         </nav>
-      </Container>
+      </HeaderContainer>
     )}
   />
 )
