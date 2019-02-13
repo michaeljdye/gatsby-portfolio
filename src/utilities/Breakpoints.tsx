@@ -25,7 +25,7 @@ export const below = Object.keys(sizes).reduce(
   (acc: Size, label: string): Size => {
     acc[label] = (...args) => css`
       @media (max-width: ${sizes[label]}px) {
-        ${css({}, ...args)}
+        ${css(...args)}
       }
     `
     return acc

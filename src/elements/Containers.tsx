@@ -63,10 +63,16 @@ export const FormWrapper = styled.div`
   border: 5px solid ${colorPrimary};
   width: 40vw;
 
+  ${below.tablet`
+    width: 70vw;
+    margin: 60px;
+  `}
+
   ${below.phone`
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
+    margin: 0;
   `}
 `
 
@@ -79,12 +85,14 @@ export const FormSection: any = styled.section`
   color: #f3f3f3;
   position: relative;
 
-  ${below.phone`
-    grid-row: 1 / 2;
+  ${below.tablet`
     padding: 0;
   `}
 
   ${below.phone`
+    flex-direction: column-reverse;
+    grid-row: 1 / 2;
+    padding: 0;
     position: initial;
   `}
 
@@ -106,8 +114,13 @@ export const ProjectsSection: any = styled.section`
   text-align: center;
   background: ${colorSecondary};
 
+  ${below.tablet`
+    grid-template-columns: repeat(2, 1fr);
+  `}
+
   ${below.phone`
     grid-template-columns: 1fr;
+    padding: ${defaultPadding} calc(${defaultPadding} / 2);
   `}
 
   h2 {
@@ -127,6 +140,10 @@ export const AboutContent = styled.div`
   padding: calc(${defaultPadding} * 2) calc(${defaultPadding} * 1.5);
   height: fit-content;
 
+  ${below.tablet`
+    padding: calc(${defaultPadding} / 2);
+  `}
+
   ${below.phone`
   padding: ${defaultPadding} 3rem;
   `};
@@ -142,6 +159,10 @@ export const AboutSection: any = styled.section`
   display: grid;
   grid-template-columns: 1fr 2fr;
   color: #000;
+
+  ${below.tablet`
+    grid-template-columns: 2fr 3frr;
+  `}
 
   ${below.phone`
     grid-template-columns: 1fr;
@@ -190,14 +211,25 @@ export const Prefooter = styled.section`
   background: ${colorPrimary};
   padding: 2.5rem;
 
+  ${below.tablet`
+    svg {
+      font-size: 4rem;
+    }
+  `}
+
   ${below.phone`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: nowrap;
+    padding: ${defaultPadding} 2.5rem;
 
     svg {
-      margin-bottom: 1.25rem;
+      font-size: 6rem;
+    }
+
+    svg:not(:last-child) {
+      margin-bottom: 2rem;
     }
   `}
 `
@@ -223,7 +255,7 @@ export const ShowcaseContent = styled.div`
     width: 50%;
     line-height: 1.5;
 
-    ${below.phone`width: 100%;`}
+    ${below.tablet`width: 100%;`}
   }
 `
 
@@ -239,22 +271,27 @@ export const Showcase = styled.section`
     url(${heroImg});
   background-blend-mode: multiply;
 
-  ${below.phone`
-  background: linear-gradient(
-      to right,
-      ${colorSecondary} 0,
-      ${colorSecondary} 100%
-    ),
-    url(${heroImg});
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  `}
+  @media screen and (max-width: 48em) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+        to right,
+        ${colorSecondary} 100%,
+        ${colorPrimary} 0
+      ),
+      url(${heroImg});
+    height: 70vh;
+  }
 
   h1 {
     font-size: 4.209rem;
     line-height: 1;
     color: #fff;
+
+    ${below.phone`
+      font-size: 3.75rem;
+    `}
   }
 `

@@ -73,6 +73,7 @@ const indexPaige: React.SFC = () => (
         <Prefooter>
           {faIcons.map((iconClass, i) => (
             <FontAwesomeIcon
+              className="prefooter__icon"
               key={i}
               icon={['fab', iconClass]}
               color="black"
