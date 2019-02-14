@@ -2,6 +2,7 @@
 path: first-post
 date: 2019-02-14T01:47:37.355Z
 title: First Post
+category: article
 ---
 Lorem ipsum dolor amet blue bottle echo park helvetica selvage kogi waistcoat hashtag cornhole aesthetic iceland tumblr chia selfies kitsch yr. Austin affogato thundercats enamel pin authentic shoreditch chartreuse. Tumblr asymmetrical street art cardigan squid. Taxidermy yuccie shabby chic polaroid. Try-hard wayfarers air plant bushwick paleo.
 
