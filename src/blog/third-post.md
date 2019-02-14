@@ -2,6 +2,7 @@
 path: third-post
 date: 2019-02-15T01:49:59.081Z
 title: Third Post
+category: Article
 ---
 Mlkshk messenger bag jean shorts green juice neutra DIY literally portland locavore tote bag shabby chic fashion axe small batch fingerstache. Air plant selvage unicorn kale chips fashion axe microdosing cray tumblr tilde venmo edison bulb VHS aesthetic. Ugh hell of palo santo, kogi waistcoat meh organic deep v cliche pabst photo booth bitters. Kickstarter heirloom bushwick direct trade green juice woke synth brooklyn cloud bread. Pour-over tilde affogato shabby chic shaman flannel la croix normcore.
 
