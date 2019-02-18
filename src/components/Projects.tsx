@@ -37,7 +37,10 @@ const Projects: React.SFC<{}> = () => (
 
 const PROJECT_CARD_QUERY = graphql`
   query ProjectInfoQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "Project" } } }
+      limit: 6
+    ) {
       edges {
         node {
           excerpt

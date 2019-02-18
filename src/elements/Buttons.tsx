@@ -13,10 +13,10 @@ const BUTTON_MODIFIERS = {
 export const Btn = styled.a`
   padding: 7px 15px;
   background: ${colorPrimary};
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: #111;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all 0.2s linear;
   margin-right: ${(props: BtnProps) => props.mr};
 

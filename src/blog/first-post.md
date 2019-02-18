@@ -3,7 +3,9 @@ path: first-post
 date: 2019-02-14T01:47:37.355Z
 title: First Post
 category: Article
+img: city.jpg
 ---
+
 Lorem ipsum dolor amet blue bottle echo park helvetica selvage kogi waistcoat hashtag cornhole aesthetic iceland tumblr chia selfies kitsch yr. Austin affogato thundercats enamel pin authentic shoreditch chartreuse. Tumblr asymmetrical street art cardigan squid. Taxidermy yuccie shabby chic polaroid. Try-hard wayfarers air plant bushwick paleo.
 
 Iceland stumptown prism distillery salvia knausgaard. Readymade fingerstache ramps viral. Ugh chicharrones wayfarers, hammock hell of lo-fi kitsch kombucha put a bird on it cloud bread. PBR&B leggings art party, semiotics artisan pinterest kogi tattooed hashtag succulents.

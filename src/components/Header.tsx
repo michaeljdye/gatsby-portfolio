@@ -28,19 +28,24 @@ const Header: React.SFC<{}> = () => (
         <nav>
           <NavLinks>
             <li>
-              <a className="header__link" href="#about">
+              <Link className="header__link" to="/#about">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header__link" href="#projects">
+              <Link className="header__link" to="/#projects">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header__link" href="#contact">
+              <Link className="header__link" to="/#contact">
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link className="header__link" to="/blog">
+                Blog
+              </Link>
             </li>
           </NavLinks>
         </nav>
