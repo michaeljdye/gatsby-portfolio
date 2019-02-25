@@ -1,15 +1,51 @@
 ---
-path: first-post
-date: 2019-02-14T01:47:37.355Z
-title: First Post
+path: free-design-resources
+date: 2019-02-26T01:47:37.355Z
+title: My Favorite Free Design Resources
 category: Article
 ---
-Lorem ipsum dolor amet blue bottle echo park helvetica selvage kogi waistcoat hashtag cornhole aesthetic iceland tumblr chia selfies kitsch yr. Austin affogato thundercats enamel pin authentic shoreditch chartreuse. Tumblr asymmetrical street art cardigan squid. Taxidermy yuccie shabby chic polaroid. Try-hard wayfarers air plant bushwick paleo.
+[Find emojis to add to your site](https://getemoji.com/)
 
-Iceland stumptown prism distillery salvia knausgaard. Readymade fingerstache ramps viral. Ugh chicharrones wayfarers, hammock hell of lo-fi kitsch kombucha put a bird on it cloud bread. PBR&B leggings art party, semiotics artisan pinterest kogi tattooed hashtag succulents.
+[Find a color pallette and get gradient ideas](https://mycolor.space/) 
 
-Blue bottle raw denim hoodie seitan church-key, schlitz gentrify crucifix fanny pack. Pabst hella selvage actually, la croix deep v farm-to-table enamel pin chia subway tile PBR&B. Photo booth tousled pop-up pork belly synth fixie iPhone hot chicken tacos enamel pin quinoa authentic forage blog you probably haven't heard of them. Flexitarian vape organic street art forage. Semiotics tbh poke, tumeric shoreditch affogato craft beer lyft intelligentsia kickstarter drinking vinegar thundercats. Aesthetic humblebrag edison bulb occupy biodiesel. Kinfolk vape unicorn retro literally, man braid bushwick health goth tumeric tacos drinking vinegar +1 lumbersexual.
+[Create your own color palette](https://palettte.app/) 
 
-Oh. You need a little dummy text for your mockup? How quaint.
+[Perfect typeface for computer screens](https://rsms.me/inter/) 
 
-I bet you’re still using Bootstrap too…
+[Subtle background images](https://www.toptal.com/designers/subtlepatterns/) 
+
+[Remove background from any image](https://www.remove.bg/) 
+
+[Free vector illustrations](https://icons8.com/ouch) 
+
+[Useful design blocks](https://www.froala.com/design-blocks) 
+
+[Free icons](https://icomoon.io/) 
+
+[Free outline icons](http://www.linea.io/) 
+
+[CSS clip path tool](http://bennettfeely.com/clippy/) 
+
+[CSS cubic-bezier tool](http://cubic-bezier.com/) 
+
+[CSS easing functions tool](https://easings.net/) 
+
+[Repo of inspiring design systems](https://designsystemsrepo.com/) 
+
+[Generate cool dual tone image effects](https://duotones.co/) 
+
+[Free SVG illustrations](https://undraw.co/illustrations) 
+
+[Create your own stock photos](https://photos.icons8.com/creator) 
+
+[Web font inspiration] (http://typ.io) 
+
+[Visual type scale calculator] (https://type-scale.com/) 
+
+[Google fonts](https://fonts.google.com/) 
+
+[Free repeatable background patterns](http://www.heropatterns.com/) 
+
+[Design inspiration] (https://land-book.com/) 
+
+[More design inspiration] (https://dribbble.com)
