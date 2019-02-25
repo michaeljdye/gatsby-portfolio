@@ -1,16 +1,18 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
 import Projects from '../components/Projects'
+import Carousel from '../components/Carousel'
 import Form from '../components/Form'
 import Layout from '../components/Layout'
 import {
   GoogleMap,
   FormWrapper,
   FormSection,
-  ProjectsSection,
+  Grid3Col,
   AboutImg,
   AboutContent,
   AboutSection,
@@ -18,7 +20,9 @@ import {
   Btn,
   ShowcaseContent,
   Showcase,
+  ReadMoreBtn,
 } from '../elements'
+import { colorSecondary } from '../utilities'
 
 library.add(faArrowAltCircleRight, fab)
 
@@ -33,7 +37,7 @@ const indexPaige: React.SFC = () => (
               Nashvile Web Developer with experience in React, Angular, and
               project management.
             </p>
-            <Btn href="#about">
+            <Btn mr="0" href="#about">
               Learn More &nbsp;
               <FontAwesomeIcon icon={faArrowAltCircleRight} />
             </Btn>
@@ -54,15 +58,29 @@ const indexPaige: React.SFC = () => (
               Manager, I take pride in empowering my project team to deliver the
               best possible work.
             </p>
-            <Btn href="#projects">View Projects</Btn>
+            <Btn mr="0" href="#projects">
+              View Projects
+            </Btn>
           </AboutContent>
         </AboutSection>
-        <ProjectsSection id="projects">
-          <h2>
-            <span>Projects</span>
-          </h2>
+        <Grid3Col rowGap="4" color={colorSecondary} id="projects">
+          <h2>Projects</h2>
           <Projects />
-        </ProjectsSection>
+        </Grid3Col>
+        <Grid3Col rowGap="2" imgHeight="250px" color="#f7f7f7">
+          <h2>Blog</h2>
+          <Carousel />
+          <ReadMoreBtn
+            style={{
+              margin: '0 auto',
+              gridColumn: '1 / -1',
+              textDecoration: 'none',
+            }}
+            to="/blog"
+          >
+            Read More
+          </ReadMoreBtn>
+        </Grid3Col>
         <FormSection id="contact">
           <GoogleMap src={mapUrl} />
           <FormWrapper>

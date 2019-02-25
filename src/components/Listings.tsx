@@ -2,7 +2,8 @@ import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 import { lighten } from 'polished'
-import { colorPrimary, colorSecondary } from '../utilities'
+import { colorPrimary, colorSecondary, defaultPadding } from '../utilities'
+import { ReadMoreBtn } from '../elements'
 
 const Listings = () => (
   <StaticQuery
@@ -10,10 +11,10 @@ const Listings = () => (
     render={({ allMarkdownRemark: { edges }, allImageSharp }) =>
       edges.map(({ node }) => (
         <PostContainer key={node.frontmatter.path}>
-          <p>{node.frontmatter.date}</p>
           <Link to={`/posts/${node.frontmatter.path}`}>
             <h2>{node.frontmatter.title}</h2>
           </Link>
+          <p>{node.frontmatter.date}</p>
           {allImageSharp.edges.map(edge =>
             edge.node.fluid.originalName === node.frontmatter.img ? (
               <img src={edge.node.fluid.src} />
@@ -35,38 +36,26 @@ const Listings = () => (
 )
 
 const PostContainer = styled.div`
+  width: 60vw;
   margin: 2.5rem 0;
+  background: #fff;
+  padding: ${defaultPadding};
 
   a {
     text-decoration: none;
   }
 
   h2 {
+    font-size: 2.5rem;
     color: #111;
   }
 
-  p:first-child {
-    font-weight: 700;
-    color: ${colorSecondary};
+  img {
+    width: 100%;
   }
 
   p {
     font-size: 1.125rem;
-  }
-`
-
-const ReadMoreBtn = styled(Link)`
-  font-size: 0.875rem;
-  padding: 7px 15px;
-  background: ${colorPrimary};
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #111;
-  text-decoration: none !important;
-  transition: all 0.2s linear;
-
-  &:hover {
-    background: ${lighten(0.2, colorPrimary)};
   }
 `
 

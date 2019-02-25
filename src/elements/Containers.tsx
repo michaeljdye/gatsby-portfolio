@@ -105,14 +105,14 @@ export const FormSection: any = styled.section`
   }
 `
 
-export const ProjectsSection: any = styled.section`
+export const Grid3Col: any = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: calc(${defaultPadding} / 2);
-  grid-row-gap: ${defaultPadding};
+  grid-row-gap: ${props => props.rowGap}rem;
   padding: ${defaultPadding};
   text-align: center;
-  background: ${colorSecondary};
+  background: ${props => props.color};
 
   ${below.tablet`
     grid-template-columns: repeat(2, 1fr);
@@ -125,11 +125,14 @@ export const ProjectsSection: any = styled.section`
 
   h2 {
     font-size: 50.52px;
-    color: #fff;
+    color: ${props => (props.color === colorSecondary ? '#fff' : '#111')};
     text-align: center;
     grid-column: 1 / -1;
     margin-bottom: 0;
-    color: #fff !important;
+  }
+
+  img {
+    height: ${props => props.imgHeight};
   }
 `
 

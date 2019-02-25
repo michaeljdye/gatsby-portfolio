@@ -6,8 +6,8 @@ const Projects: React.SFC<{}> = () => (
   <StaticQuery
     query={PROJECT_CARD_QUERY}
     render={({ allMarkdownRemark, allImageSharp }) =>
-      allMarkdownRemark.edges.map(({ node }) => (
-        <ProjectWrapper color="white">
+      allMarkdownRemark.edges.map(({ node }, i) => (
+        <ProjectWrapper color="white" key={i}>
           <ProjectImg
             img={allImageSharp.edges.map(edge =>
               edge.node.fluid.originalName === node.frontmatter.img
