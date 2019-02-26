@@ -6,48 +6,53 @@ category: Article
 img: city.jpg
 ---
 
-- [Find emojis to add to your site](https://getemoji.com/)
+Here is a curated list of some of my favorite design resources that I use in my day-to-day workflow. I hope they can be of value to you. I will be adding to this list over time.
 
-- [Find a color pallette and get gradient ideas](https://mycolor.space/)
+## Color
 
-- [Create your own color palette](https://palettte.app/)
+- <a href="https://mycolor.space/" target="_blank_">Find a color pallette and get gradient ideas</a>
+- <a href="https://palettte.app/" target="_blank">Create your own color palette</a>
 
-- [Perfect typeface for computer screens](https://rsms.me/inter/)
+## Icons
 
-- [Subtle background images](https://www.toptal.com/designers/subtlepatterns/)
+- <a href="https://icomoon.io/" target="_blank">Free icons</a>
+- <a href="http://www.linea.io/" target="_blank">Free outline icons</a>
 
-- [Remove background from any image](https://www.remove.bg/)
+## CSS Tools
 
-- [Free vector illustrations](https://icons8.com/ouch)
+- <a href="http://bennettfeely.com/clippy/" target="_blank">CSS clip path tool</a>
+- <a href="http://cubic-bezier.com/" target="_blank">CSS cubic-bezier tool</a>
+- <a href="https://easings.net/" target="_blank">CSS easing functions tool</a>
 
-- [Useful design blocks](https://www.froala.com/design-blocks)
+## Design Systems
 
-- [Free icons](https://icomoon.io/)
+- <a href="https://designsystemsrepo.com/" target="_blank">Repo of inspiring design systems</a>
 
-- [Free outline icons](http://www.linea.io/)
+## Images
 
-- [CSS clip path tool](http://bennettfeely.com/clippy/)
+- <a href="https://duotones.co/" target="_blank">Generate cool dual tone image effects</a>
+- <a href="https://undraw.co/illustrations" target="_blank">Free SVG illustrations</a>
+- <a href="http://www.heropatterns.com/" target="_blank">Free repeatable background patterns</a>
+- <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle background images</a>
+- <a href="https://www.remove.bg/" target="_blank">Remove background from any image</a>
+- <a href="https://icons8.com/ouch" target="_blank">Free vector illustrations</a>
 
-- [CSS cubic-bezier tool](http://cubic-bezier.com/)
+## Fonts
 
-- [CSS easing functions tool](https://easings.net/)
+- <a href="http://typ.io" target="_blank">Web font inspiration</a>
+- <a href="https://type-scale.com/" target="_blank">Visual type scale calculator</a>
+- <a href="https://fonts.google.com/" target="_blank">Google fonts</a>
+- <a href="https://rsms.me/" target="_blank">Perfect typeface for computer screens</a>
 
-- [Repo of inspiring design systems](https://designsystemsrepo.com/)
+## Design Inspiration
 
-- [Generate cool dual tone image effects](https://duotones.co/)
+- <a href="https://land-book.com/" target="_blank">Design inspiration</a>
+- <a href="https://dribbble.com" target="_blank">More design inspiration</a>
 
-- [Free SVG illustrations](https://undraw.co/illustrations)
+## Mocking Tools
 
-- [Create your own stock photos](https://photos.icons8.com/creator)
+- <a href="https://www.froala.com/" target="_blank">Useful design blocks</a>
 
-- [Web font inspiration](http://typ.io)
+## Fun
 
-- [Visual type scale calculator](https://type-scale.com/)
-
-- [Google fonts](https://fonts.google.com/)
-
-- [Free repeatable background patterns](http://www.heropatterns.com/)
-
-- [Design inspiration](https://land-book.com/)
-
-- [More design inspiration](https://dribbble.com)
+- <a href="https://getemoji.com/" target="_blank">Find emojis to add to your site</a>
