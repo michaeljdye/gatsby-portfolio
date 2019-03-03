@@ -78,6 +78,7 @@ const AuthorContent = styled.div`
 
 const BlogTitle = styled.h1`
   padding: 80px 80px 80px 80px;
+  margin-top: 0;
   font-size: 50px;
   text-align: center;
   text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.5);
