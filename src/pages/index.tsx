@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
 import Projects from '../components/Projects'
-import Carousel from '../components/Carousel'
+import BlogCards from '../components/BlogCards'
 import Form from '../components/Form'
 import Layout from '../components/Layout'
 import {
@@ -67,9 +67,9 @@ const indexPaige: React.SFC = () => (
           <h2>Projects</h2>
           <Projects />
         </Grid3Col>
-        <Grid3Col rowGap="2" imgHeight="250px" color="#f7f7f7">
+        <Grid3Col rowGap="4" imgHeight="250px" color="#f7f7f7">
           <h2>Blog</h2>
-          <Carousel />
+          <BlogCards />
           <ReadMoreBtn
             style={{
               margin: '0 auto',
@@ -78,7 +78,7 @@ const indexPaige: React.SFC = () => (
             }}
             to="/blog"
           >
-            Read More
+            View All
           </ReadMoreBtn>
         </Grid3Col>
         <FormSection id="contact">

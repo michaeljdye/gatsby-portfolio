@@ -14,6 +14,7 @@ export const SiteTitle = styled.h1`
 
   .header__link {
     color: #fff;
+    font-size: 1.75rem;
     text-decoration: none;
     margin: 0 0 0 6.5rem;
 

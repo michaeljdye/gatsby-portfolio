@@ -14,12 +14,13 @@ const BUTTON_MODIFIERS = {
 export const Btn = styled.a`
   padding: 7px 15px;
   background: ${colorPrimary};
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   color: #111;
   text-decoration: none !important;
   transition: all 0.2s linear;
   margin-right: ${(props: BtnProps) => props.mr};
+  cursor: pointer;
 
   &:hover {
     background: ${lighten(0.2, colorPrimary)};
@@ -28,7 +29,7 @@ export const Btn = styled.a`
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `
 export const ReadMoreBtn = styled(Link)`
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 7px 15px;
   background: ${colorPrimary};
   font-weight: 700;

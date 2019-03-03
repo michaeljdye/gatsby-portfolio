@@ -14,6 +14,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit
   }
 
+  p,
+  a,
+  li {
+    font-size: 1.125rem;
+  }
+
   a {
     text-decoration: none;
     color: ${colorFour}

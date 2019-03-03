@@ -13,6 +13,11 @@ export const ProjectImg: any = styled.div`
   height: 12.5rem;
   margin-bottom: 1.25rem;
   border-radius: 3px;
+
+  h3 {
+    width: 80%;
+    color: #fff;
+  }
 `
 
 export const GoogleMap = styled.img`

@@ -15,7 +15,7 @@ const Projects: React.SFC<{}> = () => (
                 : ''
             )}
           >
-            <h3 color="white">{node.frontmatter.title}</h3>
+            <h3>{node.frontmatter.title}</h3>
           </ProjectImg>
           <p>{node.excerpt}</p>
           <Btn
