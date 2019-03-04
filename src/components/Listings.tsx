@@ -1,8 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
-import { lighten } from 'polished'
-import { colorPrimary, colorSecondary, defaultPadding } from '../utilities'
+import { below, defaultPadding } from '../utilities'
 import { ReadMoreBtn } from '../elements'
 
 const Listings = () => (
@@ -40,6 +39,11 @@ const PostContainer = styled.div`
   margin: 2.5rem 0;
   background: #fff;
   padding: ${defaultPadding};
+
+  ${below.phone`
+    width: 90vw;
+    padding: ${defaultPadding} 40px;
+  `}
 
   a {
     text-decoration: none;

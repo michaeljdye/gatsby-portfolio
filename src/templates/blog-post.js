@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 import GlobalStyle from '../global'
 import Layout from '../components/Layout'
-import { colorPrimary, colorSecondary, colorFour } from '../utilities'
+import { colorPrimary, defaultPadding, colorFour, below } from '../utilities'
 import Profile from '../images/profile.jpeg'
 
 export default ({ data }) => {
@@ -41,41 +41,6 @@ export const query = graphql`
     }
   }
 `
-
-const AuthorBox = styled.div`
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-gap: 1.56rem;
-  align-items: center;
-  background: #f7f7f7;
-  margin-top: 5rem;
-  padding: 1.25rem;
-
-  img {
-    border-radius: 50%;
-    margin-bottom: 0;
-  }
-`
-
-const AuthorContent = styled.div`
-  h4,
-  a {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    margin-bottom: 0.625rem;
-
-    a {
-      color: ${colorFour};
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-`
-
 const BlogTitle = styled.h1`
   padding: 80px 80px 80px 80px;
   margin-top: 0;
@@ -101,5 +66,48 @@ const BlogTitle = styled.h1`
 `
 
 const BlogContent = styled.div`
-  padding: 80px 200px;
+  width: 80vw;
+  margin: 0 auto;
+  padding: ${defaultPadding} 0;
+`
+
+const AuthorBox = styled.div`
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 1.56rem;
+  align-items: center;
+  background: #f7f7f7;
+  margin-top: 5rem;
+  padding: 1.25rem;
+
+  ${below.phone`
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: ${defaultPadding} 1.25rem;
+  `}
+
+  img {
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+`
+
+const AuthorContent = styled.div`
+  h4,
+  a {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    margin-bottom: 0.625rem;
+
+    a {
+      color: ${colorFour};
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 `
