@@ -32,10 +32,11 @@ const indexPaige: React.SFC = () => (
       <div>
         <Showcase>
           <ShowcaseContent>
-            <h1>Full Stack Developer</h1>
+            <h1>Web Developer</h1>
             <p>
-              Nashvile Web Developer with experience in React, Angular, and
-              project management.
+              I am a Nashville-based web developer specialized in React. I also
+              have experience working on projects in Angular, WordPress and
+              Drupal.
             </p>
             <Btn mr="0" href="#about">
               Learn More &nbsp;
@@ -49,14 +50,20 @@ const indexPaige: React.SFC = () => (
             <h2 className="underline">
               <span>About Me</span>
             </h2>
+            <p style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
+              Hi, my name is Joey.
+            </p>
             <p>
-              I am a full stack developer located in Nashville. Hire me to build
-              your next website or app! I have worked in the advertising and
-              marketing industry for more than 4 years, gaining experience in
-              web development, project management, inbound marketing, content
-              writing and SEO. As a Marketing and Web Development Project
-              Manager, I take pride in empowering my project team to deliver the
-              best possible work.
+              I’m passionate about providing quality Web Development services in
+              and around Nashville, TN. I always go above and beyond to ensure I
+              get the job done right the first time. My work stands out because
+              I always put forth my best effort and never sacrifice on quality.
+            </p>
+            <p>
+              I’ve been doing Web Development work for over a year now, and I
+              love it because it gives me a chance to use my talents to help
+              businesses succeed. I look forward to working with you to help
+              meet all your Web Development needs.
             </p>
             <Btn mr="0" href="#projects">
               View Projects
