@@ -50,9 +50,6 @@ const indexPaige: React.SFC = () => (
             <h2 className="underline">
               <span>About Me</span>
             </h2>
-            <p style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
-              Hi, my name is Joey.
-            </p>
             <p>
               I’m passionate about providing quality Web Development services in
               and around Nashville, TN. I always go above and beyond to ensure I
