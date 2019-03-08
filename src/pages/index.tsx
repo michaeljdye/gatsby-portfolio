@@ -32,7 +32,7 @@ const indexPaige: React.SFC = () => (
       <div>
         <Showcase>
           <ShowcaseContent>
-            <h1>Web Developer</h1>
+            <h1>Front-End Developer</h1>
             <p>
               I am a Nashville-based web developer specialized in React. I also
               have experience working on projects in Angular, WordPress and
