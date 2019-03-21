@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  *, *:bofore, *:after {
+  *, *:before, *:after {
     box-sizing: inherit
   }
 
