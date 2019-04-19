@@ -6,7 +6,6 @@ import {
   colorPrimary,
   colorSecondary,
 } from '../utilities'
-import heroImg from '../images/nashville-skyline-compressed.jpg'
 
 export const HeaderContainer = styled.header`
   display: grid;
@@ -97,7 +96,6 @@ export const FormSection: any = styled.section`
   `}
 
   h2 {
-    font-size: 50.52px;
     color: #fff;
     text-align: center;
     position: relative;
@@ -124,7 +122,6 @@ export const Grid3Col: any = styled.section`
   `}
 
   h2 {
-    font-size: 50.52px;
     color: ${props => (props.color === colorSecondary ? '#fff' : '#111')};
     text-align: center;
     grid-column: 1 / -1;
@@ -140,7 +137,7 @@ export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(${defaultPadding} * 2) calc(${defaultPadding} * 1.5);
+  padding: calc(2rem * 2) calc(${defaultPadding} * 1.5);
   height: fit-content;
 
   ${below.tablet`
@@ -161,7 +158,11 @@ export const AboutContent = styled.div`
 export const AboutSection: any = styled.section`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  color: #000;
+  align-items: center;
+  justify-items: center;
+  color: #111;
+  background: #fff;
+  padding: 0 50px;
 
   ${below.tablet`
     grid-template-columns: 2fr 3frr;
@@ -174,35 +175,7 @@ export const AboutSection: any = styled.section`
 
   a {
     align-self: flex-start;
-  }
-
-  h2 {
-    font-size: 50.52px;
-    text-align: left;
-    position: relative;
-
-    span {
-      position: relative;
-      display: inline-block;
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -10px;
-        width: calc(100% + 20px);
-        z-index: -1;
-        height: 40%;
-        background: ${colorPrimary};
-        opacity: 0.5;
-        transform: skewX(30deg);
-      }
-    }
-
-    ${below.phone`
-      text-align: center;
-  `}
-  }
+  } d
 `
 
 export const Prefooter = styled.section`
@@ -255,7 +228,6 @@ export const ShowcaseContent = styled.div`
 
   p {
     color: #fff;
-    width: 50%;
     line-height: 1.5;
 
     ${below.tablet`width: 100%;`}
@@ -263,35 +235,23 @@ export const ShowcaseContent = styled.div`
 `
 
 export const Showcase = styled.section`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
   padding: 10vw 10vw;
-  height: calc(100vh - 88px);
+  height: calc(80vh - 88px);
   width: 100%;
-  background: linear-gradient(
-      150deg,
-      ${colorSecondary} 50%,
-      ${colorPrimary} 50%
-    ),
-    url(${heroImg});
-  background-blend-mode: multiply;
-
   @media screen and (max-width: 48em) {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(
-        to right,
-        ${colorSecondary} 100%,
-        ${colorPrimary} 0
-      ),
-      url(${heroImg});
     height: 70vh;
   }
 
   h1 {
-    font-size: 4.209rem;
     line-height: 1;
-    color: #fff;
+    color: #111;
 
     ${below.phone`
       font-size: 3.75rem;

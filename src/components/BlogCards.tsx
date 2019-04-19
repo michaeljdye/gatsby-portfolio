@@ -19,7 +19,7 @@ const BlogCards = () => (
                 : ''
             )}
           >
-            <h3>{node.frontmatter.title}</h3>
+            <h3 style={{ fontSize: '26px' }}>{node.frontmatter.title}</h3>
           </ProjectImg>
           <Btn as={Link} to={`/posts/${node.frontmatter.path}`}>
             Read More

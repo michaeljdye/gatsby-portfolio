@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { defaultPadding, below } from '../utilities'
+import { defaultPadding, below, colorPrimary } from '../utilities'
 
 export const SiteTitle = styled.h1`
   margin: 0;
@@ -21,16 +21,6 @@ export const SiteTitle = styled.h1`
     ${below.phone`
     margin: 0;
   `}
-  }
-`
-
-export const Paragraph = styled.p`
-  margin-bottom: 10px;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    padding-left: 10px;
   }
 `
 
@@ -68,13 +58,56 @@ export const NavLinks = styled.ul`
 
   .header__link {
     color: #fff;
+    font-weight: 600;
     text-decoration: none;
+    text-transform: uppercase;
     margin: 0;
     transition: all 0.2s ease;
 
     &:hover {
-      border-bottom: 1px solid #82f9f1;
+      border-bottom: 3px solid #82f9f1;
       padding-bottom: 5px;
     }
   }
+`
+
+// Heading 1
+
+export const Paragraph = styled.p`
+  margin-bottom: 10px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+`
+
+// Heading 3
+export const H3 = styled.h3`
+  text-align: left;
+  position: relative;
+
+  span {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      width: calc(100% + 20px);
+      z-index: -1;
+      height: 40%;
+      background: ${colorPrimary};
+      opacity: 0.5;
+      transform: skewX(30deg);
+    }
+  }
+
+  ${below.phone`
+    text-align: center;
+`}
 `

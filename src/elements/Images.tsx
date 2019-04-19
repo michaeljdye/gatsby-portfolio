@@ -37,6 +37,7 @@ export const AboutImg = styled.div`
   background: center 20% url(${aboutImg});
   background-blend-mode: overlay;
   background-size: cover;
-  width: 100%;
-  min-height: 400px;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
 `

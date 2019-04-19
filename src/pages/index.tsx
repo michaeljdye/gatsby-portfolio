@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
 import Projects from '../components/Projects'
+import MarketingSites from '../components/MarketingSites'
 import BlogCards from '../components/BlogCards'
 import Form from '../components/Form'
 import Layout from '../components/Layout'
@@ -32,24 +32,23 @@ const indexPaige: React.SFC = () => (
       <div>
         <Showcase>
           <ShowcaseContent>
-            <h1>Front-End Developer</h1>
-            <p>
-              I am a Nashville-based web developer specialized in React. I also
-              have experience working on projects in Angular, WordPress and
-              Drupal.
+            <h1 style={{ color: '#111', marginBottom: '10px' }}>
+              Front-End Developer
+            </h1>
+            <p style={{ fontSize: '24px', color: '#777', fontWeight: '600' }}>
+              Nashville-based web developer specialized in React.
             </p>
             <Btn mr="0" href="#about">
               Learn More &nbsp;
               <FontAwesomeIcon icon={faArrowAltCircleRight} />
             </Btn>
           </ShowcaseContent>
+          <div style={{ fontSize: '150px' }}>🚀</div>
         </Showcase>
         <AboutSection id="about">
           <AboutImg />
           <AboutContent>
-            <h2 className="underline">
-              <span>About Me</span>
-            </h2>
+            <h2 className="underline">Hi, I'm Joey!</h2>
             <p>
               I’m passionate about providing quality Web Development services in
               and around Nashville, TN. I always go above and beyond to ensure I
@@ -67,24 +66,8 @@ const indexPaige: React.SFC = () => (
             </Btn>
           </AboutContent>
         </AboutSection>
-        <Grid3Col rowGap="4" color={colorSecondary} id="projects">
-          <h2>Projects</h2>
-          <Projects />
-        </Grid3Col>
-        <Grid3Col rowGap="4" imgHeight="250px" color="#f7f7f7">
-          <h2>Blog</h2>
-          <BlogCards />
-          <ReadMoreBtn
-            style={{
-              margin: '0 auto',
-              gridColumn: '1 / -1',
-              textDecoration: 'none',
-            }}
-            to="/blog"
-          >
-            View All
-          </ReadMoreBtn>
-        </Grid3Col>
+        <Projects />
+        <MarketingSites />
         <FormSection id="contact">
           <GoogleMap src={mapUrl} />
           <FormWrapper>

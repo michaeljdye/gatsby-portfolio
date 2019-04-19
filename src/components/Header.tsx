@@ -20,7 +20,7 @@ const Header: React.SFC<{}> = () => (
       },
     }: HeaderProps) => (
       <HeaderContainer>
-        <SiteTitle>
+        <SiteTitle style={{ display: 'flex' }}>
           <Link className="header__link" to="/">
             {title}
           </Link>
@@ -34,17 +34,17 @@ const Header: React.SFC<{}> = () => (
             </li>
             <li>
               <Link className="header__link" to="/#projects">
-                Projects
+                Apps
+              </Link>
+            </li>
+            <li>
+              <Link className="header__link" to="/#marketing-sites">
+                Sites
               </Link>
             </li>
             <li>
               <Link className="header__link" to="/#contact">
                 Contact
-              </Link>
-            </li>
-            <li>
-              <Link className="header__link" to="/blog">
-                Blog
               </Link>
             </li>
           </NavLinks>

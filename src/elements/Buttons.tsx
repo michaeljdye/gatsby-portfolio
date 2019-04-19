@@ -16,7 +16,7 @@ export const Btn = styled.a`
   background: ${colorPrimary};
   font-weight: 600;
   text-transform: uppercase;
-  color: #111;
+  color: #fff;
   text-decoration: none !important;
   transition: all 0.2s linear;
   margin-right: ${(props: BtnProps) => props.mr};
@@ -34,7 +34,7 @@ export const ReadMoreBtn = styled(Link)`
   background: ${colorPrimary};
   font-weight: 700;
   text-transform: uppercase;
-  color: #111;
+  color: #fff;
   text-decoration: none !important;
   transition: all 0.2s linear;
 
