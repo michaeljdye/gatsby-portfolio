@@ -326,6 +326,9 @@ export const ThanksWrapper = styled.div`
   }
 
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: ${darken(0.1, '#845DC0')};
     text-decoration: none;
   }

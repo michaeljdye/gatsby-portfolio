@@ -1,11 +1,8 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import { H2, ThanksWrapper } from '../elements'
 import Layout from '../components/Layout'
-
-library.add(faArrowAltCircleLeft)
 
 export default function() {
   return (
@@ -15,7 +12,7 @@ export default function() {
           <H2>Thanks for reaching out!</H2>
           <p>I will be in touch soon.</p>
           <Link to="/">
-            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+            <FaArrowAltCircleLeft />
             &nbsp;Back to home
           </Link>
         </ThanksWrapper>
