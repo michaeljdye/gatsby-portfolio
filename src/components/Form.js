@@ -4,6 +4,7 @@ import {
   faUser,
   faEnvelope,
   faPaperPlane,
+  faComment,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   ContactForm,
@@ -11,6 +12,7 @@ import {
   FormInput,
   FormBtn,
   FlexWrapper,
+  TextArea,
 } from '../elements'
 
 const Form = () => {
@@ -26,14 +28,21 @@ const Form = () => {
         <FormLabel>
           <FontAwesomeIcon icon={faUser} color="white" size="lg" />
           &nbsp;
-          <FormInput type="text" name="name" />
+          <FormInput required type="text" name="name" />
         </FormLabel>
       </p>
       <p>
         <FormLabel>
           <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
           &nbsp;
-          <FormInput type="email" name="email" />
+          <FormInput required type="email" name="email" />
+        </FormLabel>
+      </p>
+      <p>
+        <FormLabel>
+          <FontAwesomeIcon icon={faComment} color="white" size="lg" />
+          &nbsp;
+          <TextArea rows="1" required name="message" />
         </FormLabel>
       </p>
       <FlexWrapper justifyContent="center">

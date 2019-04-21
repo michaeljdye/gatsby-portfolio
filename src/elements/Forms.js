@@ -7,6 +7,10 @@ export const ContactForm = styled.form`
   justify-content: center;
   grid-row-gap: 1.125rem;
   margin-top: 40px;
+
+  p {
+    color: #fff;
+  }
 `
 
 export const FormBtn = styled.button`
@@ -31,6 +35,7 @@ export const FormInput = styled.input`
   border-bottom: 1px solid #fff;
   background: none;
   color: #fff;
+  font-weight: 500;
 
   &:focus {
     outline: none;
@@ -39,5 +44,17 @@ export const FormInput = styled.input`
 
   &::placeholder {
     color: #fff;
+  }
+`
+export const TextArea = styled.textarea`
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid ${colorPrimary};
   }
 `
