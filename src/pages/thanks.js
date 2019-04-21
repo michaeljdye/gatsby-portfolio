@@ -5,6 +5,8 @@ import { Link } from 'gatsby'
 import { H2, ThanksWrapper } from '../elements'
 import Layout from '../components/Layout'
 
+library.add(faArrowAltCircleLeft)
+
 export default function() {
   return (
     <>
