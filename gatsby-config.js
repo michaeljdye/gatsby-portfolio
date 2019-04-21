@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
+        pathToConfigModule: `src/utilities/typography.js`,
       },
     },
     {
@@ -21,20 +21,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/src/projects`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'blog',
-        path: `${__dirname}/src/blog/`,
       },
     },
     `gatsby-transformer-remark`,
@@ -55,7 +41,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`, // make sure to put last in the array
