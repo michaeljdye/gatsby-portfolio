@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { darken } from 'polished'
 import {
   below,
   defaultPadding,
@@ -312,4 +313,20 @@ export const AboutImgWrapper = styled.div`
     max-height: 250px;
     width: 250px;
   `}
+`
+
+// Thank you page wrapper
+export const ThanksWrapper = styled.div`
+  padding: ${defaultPadding} 0;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  a {
+    color: ${darken(0.1, '#845DC0')};
+    text-decoration: none;
+  }
 `

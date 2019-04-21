@@ -191,6 +191,7 @@ const ProjectContainer = styled.div`
 const ProjectLink = styled.a`
   margin-right: 10px;
   color: ${darken(0.1, '#845DC0')};
+  text-decoration: none;
 `
 
 const ProjectImg = styled.img`
