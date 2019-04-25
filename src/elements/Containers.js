@@ -157,6 +157,14 @@ export const AboutContent = styled.div`
 
   ${below.tablet`
     padding: calc(${defaultPadding} / 2);
+
+    h2 {
+      margin: 0 auto 40px;
+
+      &:after {
+        left: 75px;
+      }
+    }
   `}
 
   ${below.phone`

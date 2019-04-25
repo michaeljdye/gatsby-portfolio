@@ -8,10 +8,15 @@ const GlobalStyle = createGlobalStyle`
   ${normalize()}
   html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   *, *:before, *:after {
     box-sizing: inherit;
+  }
+
+  body {
+    scroll-behavior: inherit !important;
   }
 
   p,

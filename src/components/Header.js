@@ -27,24 +27,24 @@ const Header = () => (
         <nav>
           <NavLinks>
             <li>
-              <Link className="header__link" to="/#about">
+              <a className="header__link" href="#about">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="header__link" to="/#projects">
+              <a className="header__link" href="#projects">
                 Apps
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="header__link" to="/#marketing-sites">
+              <a className="header__link" href="#marketing-sites">
                 Sites
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="header__link" to="/#contact">
+              <a className="header__link" href="#contact">
                 Contact
-              </Link>
+              </a>
             </li>
           </NavLinks>
         </nav>

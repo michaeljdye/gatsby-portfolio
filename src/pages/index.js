@@ -23,6 +23,12 @@ import {
   H2,
 } from '../elements'
 
+if (typeof window !== 'undefined') {
+  // Make scroll behavior of internal links smooth
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]')
+}
+
 library.add(faArrowAltCircleRight, fab)
 
 const indexPaige = () => (
@@ -49,7 +55,7 @@ const indexPaige = () => (
             <AboutImg />
           </AboutImgWrapper>
           <AboutContent>
-            <H2 margin="0 0 40px 0" className="underline">
+            <H2 left="0" margin="0 0 40px 0" className="underline">
               Hi, I'm Joey!
             </H2>
             <p>

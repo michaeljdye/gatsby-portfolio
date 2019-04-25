@@ -33,7 +33,7 @@ export default class MarketingSites extends Component {
   render() {
     return (
       <Grid3Col id="marketing-sites" rowGap="4" imgHeight="250px" color="#fff">
-        <H2 color="#111">
+        <H2 left="85px" color="#111">
           Marketing Sites{' '}
           <span aria-label="male superhero emoji" role="img">
             🦸‍♂️
@@ -58,7 +58,7 @@ export default class MarketingSites extends Component {
                 ])
               }
             >
-              View Full Image
+              View Gallery
             </Btn>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default class MarketingSites extends Component {
               ])
             }
           >
-            View Full Image
+            View Gallery
           </Btn>
         </div>
         <div>
@@ -102,7 +102,7 @@ export default class MarketingSites extends Component {
               ])
             }
           >
-            View Full Image
+            View Gallery
           </Btn>
         </div>
         <Lightbox

@@ -11,7 +11,7 @@ import memoryMatchGame from '../images/memory-match-game.png'
 
 const Projects = () => (
   <ProjectsWrapper id="projects">
-    <H2 color="#111" align="center">
+    <H2 left="55px" color="#111" align="center">
       Web Apps{' '}
       <span role="img" aria-label="Fire emoji">
         🔥
@@ -226,6 +226,8 @@ const ProjectImgWrap = styled.div`
 
   ${below.phone`
     align-self: end;
+    width: 85%;
+    margin: 0 auto;
   `}
 `
 

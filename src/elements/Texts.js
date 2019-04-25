@@ -105,17 +105,25 @@ export const H2 = styled.h2`
     content: '';
     display: block;
     position: absolute;
+    left: ${props => props.left};
     background: ${colorPrimary};
     width: 40%;
     height: 5px;
     margin-top: 10px;
   }
+
+  ${below.phone`
+    span {
+      display: none;
+    }
+  `}
 `
 
 // Heading 3
 export const H3 = styled.h3`
   text-align: left;
   position: relative;
+  font-weight: 400;
 
   span {
     position: relative;
@@ -132,7 +140,6 @@ export const H3 = styled.h3`
       height: 40%;
       background: ${colorPrimary};
       opacity: 0.5;
-      transform: skewX(30deg);
 
       ${below.phone`
         width: 0;
