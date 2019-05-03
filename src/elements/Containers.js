@@ -143,8 +143,8 @@ export const Grid3Col = styled.section`
   }
 
   img {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    max-width: 400px;
   }
 `
 

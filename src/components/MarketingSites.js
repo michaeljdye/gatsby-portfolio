@@ -40,7 +40,7 @@ export default class MarketingSites extends Component {
           </span>
         </H2>
         <div>
-          <img src={rogersGroup} alt="Rogers Group Website" width="350" />
+          <img src={rogersGroup} alt="Rogers Group Website" />
           <h3>Rogers Group</h3>
           <div>
             <Btn
@@ -63,11 +63,7 @@ export default class MarketingSites extends Component {
           </div>
         </div>
         <div>
-          <img
-            src={outbackConcerts}
-            alt="Outback Concerts website"
-            width="350"
-          />
+          <img src={outbackConcerts} alt="Outback Concerts website" />
           <h3>Outback Concerts</h3>
           <Btn
             onClick={() =>
@@ -91,7 +87,7 @@ export default class MarketingSites extends Component {
           </Btn>
         </div>
         <div>
-          <img src={teachAChild} alt="Teach a Child website" width="350" />
+          <img src={teachAChild} alt="Teach a Child website" />
           <h3>Teach a Child</h3>
           <Btn
             onClick={() =>

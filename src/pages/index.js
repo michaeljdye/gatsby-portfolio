@@ -37,8 +37,10 @@ const indexPaige = () => (
       <div>
         <Showcase>
           <ShowcaseContent>
-            <H1 color="#111">Front-End Developer</H1>
-            <p>Nashville-based web developer specialized in React.</p>
+            <H1 color="#111">Frontend Developer</H1>
+            <p>
+              Nashville-based developer specialized in React, JS, CSS and HTML.
+            </p>
             <Btn mr="0" href="#about">
               Learn More &nbsp;
               <FontAwesomeIcon icon={faArrowAltCircleRight} />
@@ -59,16 +61,16 @@ const indexPaige = () => (
               Hi, I'm Joey!
             </H2>
             <p>
-              I’m passionate about providing quality Web Development services in
-              and around Nashville, TN. I always go above and beyond to ensure I
-              get the job done right the first time. My work stands out because
-              I always put forth my best effort and never sacrifice on quality.
+              I use modern web technologies to build excellent user interfaces.
+              While I specialize in the frontend, I also have strong knowledge
+              of the backend, having built apps using Node.js, Express and
+              MongoDB.
             </p>
             <p>
-              I’ve been doing Web Development work for over a year now, and I
-              love it because it gives me a chance to use my talents to help
-              businesses succeed. I look forward to working with you to help
-              meet all your Web Development needs.
+              I enjoy learning new technologies and am continuously focused on
+              adding new libraries, frameworks, languages, and design patterns
+              to my toolbox. I also have plenty of experience building marketing
+              sites for clients on popular CMSs, such as WordPress and Drupal.
             </p>
             <Btn mr="0" href="#projects">
               View Projects

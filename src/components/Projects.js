@@ -24,10 +24,11 @@ const Projects = () => (
         </H3>
         <p>
           The MyReads app provides a simple way to find new books and track your
-          latest reads.
+          latest reads. Features include search books, add to bookshelf, track
+          reads, and bulk move.
         </p>
         <p>
-          <strong>React | CSS | JS</strong>
+          <strong>React | React Router | JS | CSS</strong>
         </p>
         <div>
           <ProjectLink
@@ -57,7 +58,7 @@ const Projects = () => (
         </div>
       </ProjectContent>
       <ProjectImgWrap>
-        <ProjectImg src={myReads} alt="My Reads app" width="400" />
+        <ProjectImg src={myReads} alt="My Reads app" />
       </ProjectImgWrap>
     </ProjectContainer>
     <ProjectContainer>
@@ -67,10 +68,14 @@ const Projects = () => (
         </H3>
         <p>
           Explore The Nations features some of the top restaurants in The
-          Nations.
+          Nations. The app works with the Yelp and Google maps APIs to retrieve
+          dynamic data about each location. In addition, Styled Components are
+          used for applying custom styles.
         </p>
         <p>
-          <strong>React | React Router | Google Maps API | Yelp API</strong>
+          <strong>
+            React | Google Maps API | Yelp API | Styled Components
+          </strong>
         </p>
         <div>
           <ProjectLink
@@ -100,11 +105,7 @@ const Projects = () => (
         </div>
       </ProjectContent>
       <ProjectImgWrap gridCol="1/2">
-        <ProjectImg
-          src={exploreTheNations}
-          alt="Explore The Nations app"
-          width="400"
-        />
+        <ProjectImg src={exploreTheNations} alt="Explore The Nations app" />
       </ProjectImgWrap>
     </ProjectContainer>
     <ProjectContainer>
@@ -112,9 +113,13 @@ const Projects = () => (
         <H3>
           <span>Memory Match Game</span>
         </H3>
-        <p>Match the cards to win the game.</p>
         <p>
-          <strong>HTML | CSS | JS</strong>
+          A modern twist on the classic card game Concentration. The app uses
+          vanilla JS written in modern ES6 syntax to manipulate DOM elements as
+          users attempt to select matching cards.
+        </p>
+        <p>
+          <strong>JS | CSS | HTML</strong>
         </p>
         <div>
           <ProjectLink
@@ -144,11 +149,7 @@ const Projects = () => (
         </div>
       </ProjectContent>
       <ProjectImgWrap>
-        <ProjectImg
-          src={memoryMatchGame}
-          alt="Memory Match Game app"
-          width="400"
-        />
+        <ProjectImg src={memoryMatchGame} alt="Memory Match Game app" />
       </ProjectImgWrap>
     </ProjectContainer>
   </ProjectsWrapper>
@@ -198,6 +199,8 @@ const ProjectImg = styled.img`
   text-align: center;
   margin-bottom: 0;
   box-shadow: 0px 0px 10px #e3e3e3;
+  width: 100%;
+  height: 100%;
 `
 
 const ProjectContent = styled.div`
@@ -218,6 +221,8 @@ const ProjectContent = styled.div`
 const ProjectImgWrap = styled.div`
   grid-column: ${props => props.gridCol || '2/3'};
   text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 
   ${below.tablet`
     grid-column: 1/-1;
