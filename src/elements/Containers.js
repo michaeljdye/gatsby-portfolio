@@ -89,6 +89,7 @@ export const FormWrapper = styled.div`
     grid-template-columns: 1fr;
     width: 100%;
     margin: 0;
+    padding: 80px 40px;
   `}
 `
 
@@ -132,6 +133,7 @@ export const Grid3Col = styled.section`
 
   ${below.tablet`
     grid-template-columns: 1fr;
+    grid-row-gap: 2.7rem;
     padding: ${defaultPadding} calc(${defaultPadding} / 2);
   `}
 
@@ -153,11 +155,11 @@ export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(2rem * 2) calc(${defaultPadding} * 1.5);
+  padding: 4rem calc(${defaultPadding} * 1.5);
   height: fit-content;
 
   ${below.tablet`
-    padding: calc(${defaultPadding} / 2);
+    padding: 40px 40px 0 40px;
 
     h2 {
       margin: 0 auto 40px;
@@ -169,7 +171,7 @@ export const AboutContent = styled.div`
   `}
 
   ${below.phone`
-  padding: calc(${defaultPadding} / 2)  0;
+  padding: 40px 0 0  0;
   `};
 
   a {
@@ -286,7 +288,8 @@ export const Showcase = styled.section`
     grid-auto-flow: dense;
     justify-items: center;
     text-align: center;
-    height: 90vh
+    height: fit-content;
+    padding: 80px 40px;
 
     .showcase__rocket {
       grid-row: 1/1;

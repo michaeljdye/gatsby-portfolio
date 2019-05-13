@@ -159,6 +159,12 @@ const ProjectsWrapper = styled.div`
   padding: 80px 150px 0 150px;
   background: #fff;
 
+  ${below.tablet`
+    h2 {
+      margin-bottom: 50px;
+    }
+  `}
+
   ${below.phone`
       padding: 80px 20px 0 20px;
   `}
@@ -170,13 +176,21 @@ const ProjectContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 80px 0;
-  border-bottom: 1px solid #ebebeb;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #ebebeb;
+  }
 
   ${below.tablet`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-row-gap: 40px;
     border: none;
+    padding 80px 0 40px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
 
     h3,
     p,
