@@ -174,8 +174,9 @@ const ProjectContainer = styled.div`
 
   ${below.tablet`
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-row-gap: 40px;
+    border: none;
 
     h3,
     p,

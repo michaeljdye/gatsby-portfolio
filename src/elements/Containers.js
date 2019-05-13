@@ -145,6 +145,7 @@ export const Grid3Col = styled.section`
   img {
     height: auto;
     max-width: 400px;
+    width: 100%;
   }
 `
 
