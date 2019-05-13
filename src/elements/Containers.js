@@ -155,7 +155,7 @@ export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem calc(${defaultPadding} * 1.5);
+  padding: 4rem calc(${defaultPadding} * 1.5) 0;
   height: fit-content;
 
   ${below.tablet`
@@ -275,8 +275,8 @@ export const Showcase = styled.section`
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
-  padding: 10vw 10vw;
-  height: calc(80vh - 88px);
+  padding: 10vw;
+  height: fit-content;
   width: 100%;
 
   .showcase__rocket {

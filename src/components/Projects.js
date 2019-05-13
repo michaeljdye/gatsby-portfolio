@@ -156,7 +156,7 @@ const Projects = () => (
 )
 
 const ProjectsWrapper = styled.div`
-  padding: 80px 150px 0 150px;
+  padding: 80px 40px 0;
   background: #fff;
 
   ${below.tablet`
@@ -176,6 +176,10 @@ const ProjectContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 80px 0;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid #ebebeb;
