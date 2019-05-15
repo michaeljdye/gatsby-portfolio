@@ -36,7 +36,7 @@ export default class MarketingSites extends Component {
         <H2 left="85px" color="#111">
           Marketing Sites{' '}
           <span aria-label="male superhero emoji" role="img">
-            🦸‍♂️
+            👨‍🎤
           </span>
         </H2>
         <div>

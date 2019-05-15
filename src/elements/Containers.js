@@ -50,7 +50,7 @@ export const FooterWrapper = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  height: fit-content;
+  height: auto;
   padding: ${defaultPadding} 0;
   background: ${colorTertiary};
   color: #fff;
@@ -276,7 +276,7 @@ export const Showcase = styled.section`
   grid-template-columns: 3fr 1fr;
   align-items: center;
   padding: 10vw;
-  height: fit-content;
+  height: auto;
   width: 100%;
 
   .showcase__rocket {
