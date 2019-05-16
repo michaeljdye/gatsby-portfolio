@@ -40,7 +40,23 @@ export default class MarketingSites extends Component {
           </span>
         </H2>
         <div>
-          <img src={rogersGroup} alt="Rogers Group Website" />
+          <img
+            src={rogersGroup}
+            alt="Rogers Group Website"
+            onClick={() =>
+              this.displayLightbox([
+                { src: rogersGroupTop, alt: 'Rogers Group website top' },
+                {
+                  src: rogersGroupMiddle,
+                  alt: 'Rogers Group website middle',
+                },
+                {
+                  src: rogersGroupBottom,
+                  alt: 'Rogers Group website bottom',
+                },
+              ])
+            }
+          />
           <h3>Rogers Group</h3>
           <div>
             <Btn
@@ -63,7 +79,26 @@ export default class MarketingSites extends Component {
           </div>
         </div>
         <div>
-          <img src={outbackConcerts} alt="Outback Concerts website" />
+          <img
+            src={outbackConcerts}
+            alt="Outback Concerts website"
+            onClick={() =>
+              this.displayLightbox([
+                {
+                  src: outbackConcertsTop,
+                  alt: 'Outback Concerts website top',
+                },
+                {
+                  src: outbackConcertsMiddle,
+                  alt: 'Outback Concerts website middle',
+                },
+                {
+                  src: outbackConcertsBottom,
+                  alt: 'Outback Concerts website bottom',
+                },
+              ])
+            }
+          />
           <h3>Outback Concerts</h3>
           <Btn
             onClick={() =>
@@ -87,7 +122,17 @@ export default class MarketingSites extends Component {
           </Btn>
         </div>
         <div>
-          <img src={teachAChild} alt="Teach a Child website" />
+          <img
+            src={teachAChild}
+            alt="Teach a Child website"
+            onClick={() =>
+              this.displayLightbox([
+                { src: teachAChildTop, alt: 'Teach a Child website top' },
+                { src: teachAChildMiddle, alt: 'Teach a Child website middle' },
+                { src: teachAChildBottom, alt: 'Teach a Child website bottom' },
+              ])
+            }
+          />
           <h3>Teach a Child</h3>
           <Btn
             onClick={() =>

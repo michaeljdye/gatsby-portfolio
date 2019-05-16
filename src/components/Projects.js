@@ -35,6 +35,7 @@ const Projects = () => (
             href="https://github.com/JoeyDye/my-reads"
             target="_blank"
             rel="noopener noreferrer"
+            color="#845DC0"
           >
             View Source{' '}
             <FontAwesomeIcon
@@ -47,6 +48,7 @@ const Projects = () => (
             href="https://myreads-5icjs7wez.now.sh/"
             target="_blank"
             rel="noopener noreferrer"
+            color="#845DC0"
           >
             View Demo{' '}
             <FontAwesomeIcon
@@ -82,6 +84,7 @@ const Projects = () => (
             href="https://github.com/JoeyDye/explore-the-nations"
             target="_blank"
             rel="noopener noreferrer"
+            color="#845DC0"
           >
             View Source{' '}
             <FontAwesomeIcon
@@ -94,6 +97,7 @@ const Projects = () => (
             href="https://explorethenations-86j0hrveh.now.sh/"
             target="_blank"
             rel="noopener noreferrer"
+            color="#845DC0"
           >
             View Demo{' '}
             <FontAwesomeIcon
@@ -126,6 +130,7 @@ const Projects = () => (
             href="https://github.com/JoeyDye/memory-match-game"
             target="_blank"
             rel="noopener noreferrer"
+            color="#845DC0"
           >
             View Source{' '}
             <FontAwesomeIcon
@@ -138,6 +143,7 @@ const Projects = () => (
             href="https://confident-hodgkin-027b22.netlify.com/"
             target="_blank"
             rel="noopener noreferrer"
+            color="#845DC0"
           >
             View Demo{' '}
             <FontAwesomeIcon
@@ -210,8 +216,14 @@ const ProjectContainer = styled.div`
 
 const ProjectLink = styled.a`
   margin-right: 10px;
-  color: ${darken(0.1, '#845DC0')};
+  color: ${props => darken(0.1, props.color)};
   text-decoration: none;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &:hover > svg {
+    color: ${props => darken(0.3, props.color)};
+  }
 `
 
 const ProjectImg = styled.img`

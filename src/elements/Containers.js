@@ -6,6 +6,7 @@ import {
   colorTertiary,
   colorPrimary,
   colorSecondary,
+  colorFour,
 } from '../utilities'
 
 export const HeaderContainer = styled.header`
@@ -69,8 +70,17 @@ export const FooterWrapper = styled.footer`
     font-size: 1.563rem;
   }
 
+  a:hover,
+  a:hover > svg {
+    color: ${colorFour};
+  }
+
+  .footer__icon {
+    margin-right: 10px;
+  }
+
   .footer__content {
-    padding-left: 10px;
+    padding-left: 0;
   }
 `
 
@@ -148,6 +158,7 @@ export const Grid3Col = styled.section`
     height: auto;
     max-width: 400px;
     width: 100%;
+    cursor: pointer;
   }
 `
 

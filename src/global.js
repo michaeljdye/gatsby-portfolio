@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${colorFour}
+    color: ${colorFour};
   }
 `
 

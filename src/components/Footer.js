@@ -44,17 +44,29 @@ const Footer = () => (
       <div>
         <h4>Contact</h4>
         <Paragraph>
-          <FontAwesomeIcon icon={faEnvelope} color="white" size="lg" />
           <a
             className="footer__content"
-            href="&#109;&#97;ilt&#111;&#58;&#37;6A%&#54;Fe%79%40&#37;6&#65;&#111;eyd&#37;&#55;9%65&#46;&#99;o%&#54;D"
+            href="mailto&#58;joeymd%&#55;9e&#64;&#37;67m&#97;%6&#57;l&#46;%&#54;3%&#54;Fm"
           >
-            j&#111;e&#121;&#64;&#106;oeydye&#46;&#99;om
+            <FontAwesomeIcon
+              className="footer__icon"
+              icon={faEnvelope}
+              color="white"
+              size="lg"
+            />
+            &#106;oey&#109;d&#121;e&#64;&#103;m&#97;i&#108;&#46;&#99;om
           </a>
         </Paragraph>
         <Paragraph>
-          <FontAwesomeIcon icon={faMapMarker} color="white" size="lg" />
-          <span className="footer__content">Nashville, TN</span>
+          <span className="footer__content">
+            <FontAwesomeIcon
+              className="footer__icon"
+              icon={faMapMarker}
+              color="white"
+              size="lg"
+            />
+            Nashville, TN
+          </span>
         </Paragraph>
       </div>
     </FooterWrapper>
