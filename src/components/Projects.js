@@ -8,6 +8,7 @@ import { H3, H2 } from '../elements'
 import exploreTheNations from '../images/explore-the-nations.png'
 import myReads from '../images/my-reads.png'
 import memoryMatchGame from '../images/memory-match-game.png'
+import spaceExplorer from '../images/space-explorer.png'
 
 const Projects = () => (
   <ProjectsWrapper id="projects">
@@ -109,25 +110,24 @@ const Projects = () => (
         </div>
       </ProjectContent>
       <ProjectImgWrap gridCol="1/2">
-        <ProjectImg src={exploreTheNations} alt="Explore The Nations app" />
+        <ProjectImg src={exploreTheNations} alt="Explore the Nations app" />
       </ProjectImgWrap>
     </ProjectContainer>
     <ProjectContainer>
       <ProjectContent>
         <H3>
-          <span>Memory Match Game</span>
+          <span>Space Explorer</span>
         </H3>
         <p>
-          A modern twist on the classic card game Concentration. The app uses
-          vanilla JS written in modern ES6 syntax to manipulate DOM elements as
-          users attempt to select matching cards.
+          Explore stars, planets and other astronomical objects from the NASA
+          database.
         </p>
         <p>
-          <strong>JS | CSS | HTML</strong>
+          <strong>React | Node.js | Express | MongoDB | JWT</strong>
         </p>
         <div>
           <ProjectLink
-            href="https://github.com/JoeyDye/memory-match-game"
+            href="https://github.com/JoeyDye/space-explorer"
             target="_blank"
             rel="noopener noreferrer"
             color="#845DC0"
@@ -140,7 +140,7 @@ const Projects = () => (
             />
           </ProjectLink>
           <ProjectLink
-            href="https://confident-hodgkin-027b22.netlify.com/"
+            href="https://joeydye.rocks/"
             target="_blank"
             rel="noopener noreferrer"
             color="#845DC0"
@@ -155,7 +155,7 @@ const Projects = () => (
         </div>
       </ProjectContent>
       <ProjectImgWrap>
-        <ProjectImg src={memoryMatchGame} alt="Memory Match Game app" />
+        <ProjectImg src={spaceExplorer} alt="Space Explorer app" />
       </ProjectImgWrap>
     </ProjectContainer>
   </ProjectsWrapper>
