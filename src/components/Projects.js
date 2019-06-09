@@ -140,7 +140,7 @@ const Projects = () => (
             />
           </ProjectLink>
           <ProjectLink
-            href="https://joeydye.rocks/"
+            href="http://joeydye.rocks/"
             target="_blank"
             rel="noopener noreferrer"
             color="#845DC0"
