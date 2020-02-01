@@ -1,5 +1,5 @@
 ---
-path: hello
+path: /hello-from-the-blog/
 date: 2020-02-01T07:07:24.449Z
 title: Hello from the blog
 category: dev
