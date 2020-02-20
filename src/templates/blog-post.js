@@ -2,9 +2,8 @@ import React from 'react'
 
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import { innerPadding, defaultPadding } from '../utilities/Padding'
 import { Banner } from '../elements/Banners'
-import { colorPrimary, colorFour } from '../utilities/Colors'
+import { colorFour } from '../utilities/Colors'
 
 const BlogPost = ({
   data: {
