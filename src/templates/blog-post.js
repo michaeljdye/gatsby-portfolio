@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { innerPadding, defaultPadding } from '../utilities/Padding'
 import { Banner } from '../elements/Banners'
+import { colorPrimary, colorFour } from '../utilities/Colors'
 
 const BlogPost = ({
   data: {
@@ -16,11 +17,40 @@ const BlogPost = ({
   return (
     <Layout>
       <Banner>
-        <h1>{title}</h1>
+        <h1
+          css={`
+            color: ${colorFour};
+          `}
+        >
+          {title}
+        </h1>
       </Banner>
       <div
         css={`
-          padding: 0 ${innerPadding} ${defaultPadding};
+          max-width: 800px;
+          width: 88%;
+          margin: 0 auto;
+
+          h2 {
+            position: relative;
+            width: fit-content;
+
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 0;
+              background: #00d8c9;
+              width: 40%;
+              height: 5px;
+              margin-top: 10px;
+            }
+          }
+
+          a {
+            color: ${colorFour};
+            text-decoration: none;
+          }
         `}
         dangerouslySetInnerHTML={{ __html: html }}
       />
