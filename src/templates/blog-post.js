@@ -1,9 +1,10 @@
 import React from 'react'
-
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Banner } from '../elements/Banners'
-import { colorFour } from '../utilities/Colors'
+import { colorPrimary, colorFour } from '../utilities/Colors'
+import { paddingLg, paddingSm, paddingMd } from '../utilities/padding'
+import aboutImg from '../images/joey-dye-sf.jpg'
 
 const BlogPost = ({
   data: {
@@ -18,41 +19,66 @@ const BlogPost = ({
       <Banner>
         <h1
           css={`
-            color: ${colorFour};
+            color: ${colorPrimary};
+            margin-bottom: 0;
+            text-transform: capitalize;
           `}
         >
           {title}
         </h1>
       </Banner>
-      <div
+      <main
         css={`
-          max-width: 800px;
+          max-width: 700px;
           width: 88%;
           margin: 0 auto;
-
-          h2 {
-            position: relative;
-            width: fit-content;
-
-            &:after {
-              content: '';
-              display: block;
-              position: absolute;
-              left: 0;
-              background: #00d8c9;
-              width: 40%;
-              height: 5px;
-              margin-top: 10px;
-            }
-          }
-
-          a {
-            color: ${colorFour};
-            text-decoration: none;
-          }
+          font-size: 1.125rem;
         `}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      >
+        <div
+          css={`
+            h2 {
+              position: relative;
+              width: fit-content;
+            }
+
+            a {
+              color: ${colorFour};
+              text-decoration: none;
+            }
+          `}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <div
+          css={`
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #bbb;
+            padding: ${paddingMd} 0 ${paddingLg} 0;
+          `}
+        >
+          <img
+            src={aboutImg}
+            css={`
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              margin: 0 20px 0 0;
+            `}
+          />
+          <div>
+            <h3
+              css={`
+                padding-top: ${paddingSm};
+                margin-bottom: 10px;
+              `}
+            >
+              Joey Dye
+            </h3>
+            <p>Joey Dye is a Frontend Developer at Campaign Monitor.</p>
+          </div>
+        </div>
+      </main>
     </Layout>
   )
 }
