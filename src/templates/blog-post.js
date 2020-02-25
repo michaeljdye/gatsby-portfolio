@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Banner } from '../elements/Banners'
-import { colorPrimary, colorFour } from '../utilities/Colors'
+import { colorSecondary, colorFour } from '../utilities/Colors'
 import { paddingLg, paddingSm, paddingMd } from '../utilities/padding'
 import aboutImg from '../images/joey-dye-sf.jpg'
 
@@ -19,7 +19,7 @@ const BlogPost = ({
       <Banner>
         <h1
           css={`
-            color: ${colorPrimary};
+            color: ${colorSecondary};
             margin-bottom: 0;
             text-transform: capitalize;
           `}

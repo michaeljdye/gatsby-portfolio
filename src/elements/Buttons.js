@@ -27,17 +27,3 @@ export const Btn = styled.a`
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `
-export const ReadMoreBtn = styled(Link)`
-  font-size: 1rem;
-  padding: 7px 15px;
-  background: ${colorPrimary};
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  text-decoration: none !important;
-  transition: all 0.2s linear;
-
-  &:hover {
-    background: ${lighten(0.2, colorPrimary)};
-  }
-`
