@@ -37,7 +37,7 @@ const Blog = ({
         css={`
           padding: 0 ${innerPadding} ${defaultPadding};
         `}
-      >
+      > 
         <ul css="display: flex; flex-wrap: wrap; justify-content: center; list-style: none;">
           {edges
             .filter(
@@ -45,7 +45,9 @@ const Blog = ({
                 node: {
                   frontmatter: { category },
                 },
-              }) => category === value || value === 'All'
+              }) =>
+                category.toLowerCase() === value.toLowerCase() ||
+                value === 'All'
             )
             .map(
               ({
