@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Banner } from '../elements/Banners'
 import { colorSecondary, colorFour } from '../utilities/Colors'
-import { paddingLg, paddingSm, paddingMd } from '../utilities/padding'
+import { paddingLg, paddingSm, paddingMd } from '../utilities/Padding'
 import aboutImg from '../images/joey-dye-sf.jpg'
 
 const BlogPost = ({
