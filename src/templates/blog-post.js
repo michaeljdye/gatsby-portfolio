@@ -16,17 +16,6 @@ const BlogPost = ({
 }) => {
   return (
     <Layout>
-      <Banner>
-        <h1
-          css={`
-            color: ${colorSecondary};
-            margin-bottom: 0;
-            text-transform: capitalize;
-          `}
-        >
-          {title}
-        </h1>
-      </Banner>
       <main
         css={`
           max-width: 700px;
@@ -35,6 +24,17 @@ const BlogPost = ({
           font-size: 1.125rem;
         `}
       >
+        <Banner>
+          <h1
+            css={`
+              color: ${colorSecondary};
+              margin-bottom: 0;
+              text-transform: capitalize;
+            `}
+          >
+            {title}
+          </h1>
+        </Banner>
         <div
           css={`
             h2 {

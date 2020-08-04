@@ -23,7 +23,7 @@ const Blog = ({
       <Banner>
         <h1>Blog</h1>
       </Banner>
-      <section css="display: flex; justify-content: center;">
+      {/*      <section css="display: flex; justify-content: center;">
         <form>
           <select value={value} onChange={handleChange}>
             <option>All</option>
@@ -32,12 +32,12 @@ const Blog = ({
             <option>CSS</option>
           </select>
         </form>
-      </section>
+      </section> */}
       <section
         css={`
           padding: 0 ${innerPadding} ${defaultPadding};
         `}
-      > 
+      >
         <ul css="display: flex; flex-wrap: wrap; justify-content: center; list-style: none;">
           {edges
             .filter(
@@ -81,7 +81,7 @@ const Blog = ({
                       text-decoration: none;
                       color: ${colorPrimary};
                     `}
-                    to={`posts${slug}`}
+                    to={`/blog${slug}`}
                   >
                     Read More
                     <FontAwesomeIcon
