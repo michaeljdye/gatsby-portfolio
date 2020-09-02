@@ -10,11 +10,26 @@ import {
 } from '../utilities'
 
 export const HeaderContainer = styled.header`
+  position: ${({ isSticky }) => (isSticky ? 'fixed' : 'static')};
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background: #0b0c10;
   padding: 20px 0;
+  animation: ${({ isSticky }) => isSticky && 'slide-down 0.7s'};
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
   ${below.tablet`
     grid-template-columns: 1fr;
