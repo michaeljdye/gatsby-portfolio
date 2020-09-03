@@ -12,7 +12,7 @@ const BUTTON_MODIFIERS = {
 
 export const Btn = styled.a`
   padding: 7px 15px;
-  background: ${colorPrimary};
+  background: ${({ theme }) => theme.colorPrimary};
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
@@ -22,7 +22,7 @@ export const Btn = styled.a`
   cursor: pointer;
 
   &:hover {
-    background: ${lighten(0.2, colorPrimary)};
+    background: ${({ theme }) => lighten(0.2, theme.colorPrimary)};
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
