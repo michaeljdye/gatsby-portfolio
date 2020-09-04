@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import SEO from './SEO'
 import Header from './Header'
 import Footer from './Footer'
+import { lightTheme, darkTheme } from '../utils'
 
 const Layout = ({ children }) => {
-  const lightTheme = {
-    colorPrimary: '#00e9ec',
-    colorSecondary: '#202833',
-    colorTertiary: '#845DC0',
-    colorDark: '#0b0c10',
-    colorLight: '#fff',
+  const [theme, setTheme] = useState(lightTheme)
+
+  const handleTheme = e => {
+    e.preventDefault()
+
+    setTheme(prevTheme => (prevTheme.type === 'light' ? darkTheme : lightTheme))
   }
 
   return (
@@ -27,9 +28,10 @@ const Layout = ({ children }) => {
         }
       `}
       render={({ site }) => (
-        <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={theme}>
           <SEO />
           <Header />
+          <button onClick={handleTheme}>Toggle Theme</button>
           {children}
           <Footer />
         </ThemeProvider>

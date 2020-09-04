@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { below } from '../utilities'
+import { below } from '../utils'
 import aboutImg from '../images/joey-dye-sf.jpg'
 
 export const ProjectImg = styled.div`

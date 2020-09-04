@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { lighten } from 'polished'
-import { colorPrimary } from '../utilities'
+import { colorPrimary } from '../utils'
 
 export const ContactForm = styled.form`
   display: grid;

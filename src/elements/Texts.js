@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { defaultPadding, below, colorPrimary } from '../utilities'
+import { defaultPadding, below, colorPrimary } from '../utils'
 
 export const SiteTitle = styled.h1`
   display: flex;

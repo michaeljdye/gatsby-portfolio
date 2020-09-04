@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { lighten } from 'polished'
 import { applyStyleModifiers } from 'styled-components-modifiers'
-import { colorPrimary } from '../utilities'
+import { colorPrimary } from '../utils'
 import { Link } from 'gatsby'
 
 const BUTTON_MODIFIERS = {

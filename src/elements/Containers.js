@@ -7,7 +7,7 @@ import {
   colorPrimary,
   colorSecondary,
   colorFour,
-} from '../utilities'
+} from '../utils'
 
 export const HeaderContainer = styled.header`
   position: ${({ isSticky }) => (isSticky ? 'fixed' : 'static')};

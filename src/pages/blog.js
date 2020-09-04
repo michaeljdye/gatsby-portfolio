@@ -4,8 +4,8 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import { Banner } from '../elements/Banners'
-import { white, colorSecondary, colorPrimary } from '../utilities/Colors'
-import { innerPadding, defaultPadding } from '../utilities/Padding'
+import { white, colorSecondary, colorPrimary } from '../utils/Colors'
+import { innerPadding, defaultPadding } from '../utils/Padding'
 
 const Blog = ({
   data: {

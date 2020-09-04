@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { paddingLg, paddingMd } from '../utilities/Padding'
+import { paddingLg, paddingMd } from '../utils/Padding'
 
 export const Banner = styled.div`
   display: flex;

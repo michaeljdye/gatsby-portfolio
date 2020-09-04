@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { darken } from 'polished'
-import { below } from '../utilities'
+import { below } from '../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { H3, H2 } from '../elements'
