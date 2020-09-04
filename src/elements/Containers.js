@@ -263,21 +263,6 @@ export const Prefooter = styled.section`
 `
 
 export const ShowcaseContent = styled.div`
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-
-  @keyframes fadeInOpacity {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   ${below.tablet`
     align-self: start;
   `}

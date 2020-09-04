@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -22,7 +23,6 @@ import {
   H1,
   H2,
 } from '../elements'
-import { motion, useViewportScroll } from 'framer-motion'
 
 if (typeof window !== 'undefined') {
   // Make scroll behavior of internal links smooth
@@ -38,17 +38,23 @@ const Home = () => {
       <Layout>
         <div>
           <Showcase>
-            <ShowcaseContent>
-              <H1 color="#111">Fullstack Developer</H1>
-              <p>
-                Nashville-based developer specialized in React, JS, CSS and
-                HTML.
-              </p>
-              <Btn mr="0" href="#about">
-                Learn More &nbsp;
-                <FontAwesomeIcon icon={faArrowAltCircleRight} />
-              </Btn>
-            </ShowcaseContent>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+            >
+              <ShowcaseContent>
+                <H1 color="#111">Fullstack Developer</H1>
+                <p>
+                  Nashville-based developer specialized in React, JS, CSS and
+                  HTML.
+                </p>
+                <Btn mr="0" href="#about">
+                  Learn More &nbsp;
+                  <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                </Btn>
+              </ShowcaseContent>
+            </motion.div>
             <div className="showcase__rocket">
               <span role="img" aria-label="spaceship emoji">
                 🚀
