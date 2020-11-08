@@ -65,11 +65,6 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <Link to="/blog" className="header__link">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <a className="header__link" href="#contact">
                   Contact
                 </a>
