@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
         <ThemeProvider theme={theme}>
           <SEO />
           <Header />
-          <button onClick={handleTheme}>Toggle Theme</button>
+          {/* <button onClick={handleTheme}>Toggle Theme</button> */}
           {children}
           <Footer />
         </ThemeProvider>
